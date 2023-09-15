@@ -40,15 +40,15 @@ public class BossRepository {
         bossList.add(cerbero);
 
         Boss elicius = new Boss();
-        elicius.setId(2);
+        elicius.setId(3);
         elicius.setNome("Elicius");
         elicius.setDificuldade("Dificil");
         elicius.setVida(300);
         elicius.setAtq(50);
         elicius.setDef(30);
-        elicius.setDescricao("Um dragão negro com raio e trovão, assustam a todos com sua imensidão, um monstro " +
-                "alado que assusta a todos com seu rosnado, todos os conhecem como Elicius e se tiver sorte ele " +
-                "escutará seus suplicios.");
+        elicius.setDescricao("Um dragão negro com raio e trovão, assusta a todos com sua imensidão, um monstro " +
+                "alado que esbraveja força por sua calda, todos os conhecem como Elicius e se tiver sorte ele " +
+                "escutará seus suplícios.");
 
         bossList.add(elicius);
     }

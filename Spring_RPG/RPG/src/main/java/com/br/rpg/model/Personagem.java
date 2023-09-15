@@ -5,25 +5,20 @@ public abstract class Personagem {
     protected int vida;
     protected int atq;
     protected int def;
-    private Atacar ataque;
-    private Defender defende;
 
+    //construtor
     public Personagem(String nome, int vida, int atq, int def) {
         this.nome = nome;
         this.vida = vida;
         this.atq = atq;
         this.def = def;
-
     }
 
-    //pegue esse método no chatgpt para entender melhor como construí-los
-    public void realizarAtaque(Personagem alvo){
-        ataque.executar(this, alvo);
-    }
-    public void realizarDefeza(int dano){
-        defende.executar(this, dano);
-    }
+    //métodos
+    public void realizarAtaque(){}
+    public void realizarDefeza(){}
 
+    //getters e setters
     public String getNome() {
         return nome;
     }
@@ -54,22 +49,6 @@ public abstract class Personagem {
 
     public void setDef(int def) {
         this.def = def;
-    }
-
-    public Atacar getAtacar() {
-        return atacar;
-    }
-
-    public void setAtacar(Atacar atacar) {
-        this.atacar = atacar;
-    }
-
-    public Defender getDefender() {
-        return defender;
-    }
-
-    public void setDefender(Defender defender) {
-        this.defender = defender;
     }
 }
 
