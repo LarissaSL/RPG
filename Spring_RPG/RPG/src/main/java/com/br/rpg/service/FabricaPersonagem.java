@@ -1,4 +1,4 @@
-package com.br.rpg.services;
+package com.br.rpg.service;
 
 public interface FabricaPersonagem {
  Guerreiro criarGuerreiro();

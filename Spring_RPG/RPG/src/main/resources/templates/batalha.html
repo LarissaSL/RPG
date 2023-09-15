@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-BR" xmlns:th="<http://www.thymeleaf.org>">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,69 +64,24 @@
     <section class="container-2">
         <h3 class="inimigos">Conheça seus Inimigos</h3>
 
-        <div class="container-3">
-            <div class="inimigo-1">
-                <img class="img-icon-inimigo-1" src="/img/personagens/minotauroSimbolo.png"
-                     alt="nomeDoSimboloDoInimigo">
-                <img class="img-inimigo-1" src="/img/personagens/minotauro.png" alt="nomeDoInimigo">
+        <ul class="container-3">
+            <li th:each="boss : ${bosses}" th:class="${boss.nome}">
+                <img th:class="'img-icon-' + ${boss.nome}"
+                     th:src="${boss.getCaminhoDaImgSimbolo()}"
+                     th:alt="${boss.nome}">
+                <img class="img-inimigo-1" th:src="${boss.getCaminhoDaImg()}"
+                     th:alt="${boss.nome}">
 
-                <h4 class="nome-inimigo">Minotauro</h4>
-                <h5 class="dificuldade-inimigo-1">Dificuldade</h5>
-                <h5 class="vida-inimigo-1">100 de HP</h5>
-
-                <p class="descricao-inimigo-1">
-                    Minotauro uma criatura vilanesca, corpo de homem e um touro é sua cabeça, por onde ele passa não há
-                    paz, é melhor tomar cuidado com seu apetite voraz,
-                    é melhor você escolher se quer sobreviver ou morrer.
-                </p>
+                <span class="nome-boss" th:text="${boss.nome}"></span>
+                <span class="dificuldade-boss" th:text="${boss.dificuldade}"></span>
+                <span class="vida-boss" th:text="'Vida' + ${boss.vida}"></span>
+                <span class="descricao-boss" th:text="${boss.descricao}"></span>
 
                 <a href="#" target="_blank">
-                    <button class="botao-batalhar-inimigos">Batalhar</button>
+                    <button th:class="'botao-batalhar-'+ ${boss.nome}">Batalhar</button>
                 </a>
-            </div>
-        </div>
-
-        <div class="container-4">
-            <div class="inimigo-2">
-                <h4 class="nome-inimigo">Cérbero</h4>
-                <h5 class="dificuldade-inimigo-2">Dificuldade</h5>
-                <h5 class="vida-inimigo-2">120 de HP</h5>
-
-                <p class="descricao-inimigo-2">
-                    Para derrotar o mal, precisa lidar com um grande cão infernal, guardando uma enorme porteira onde
-                    não se pode dar bobeira, Cérbero é o nome do cão malvado,
-                    cuidado ou será devorado.
-                </p>
-
-                <img class="img-icon-inimigo-2" src="/img/personagens/cerberoSimbolo.png" alt="nomeDoSimboloDoInimigo">
-                <img class="img-inimigo-2" src="/img/personagens/cerbero.png" alt="nomeDoInimigo">
-
-                <a href="#" target="_blank">
-                    <button class="botao-batalhar-inimigos">Batalhar</button>
-                </a>
-            </div>
-        </div>
-
-        <div class="container-5">
-            <div class="inimigo-3">
-                <img class="img-icon-inimigo-3" src="/img/personagens/dragaoSimbolo.png" alt="nomeDoSimboloDoInimigo">
-                <img class="img-inimigo-3" src="/img/personagens/dragao.png" alt="nomeDoInimigo">
-
-                <h4 class="nome-inimigo">Elicius</h4>
-                <h5 class="dificuldade-inimigo-3">Dificuldade</h5>
-                <h5 class="vida-inimigo-3">150 de HP</h5>
-
-                <p class="descricao-inimigo-3">
-                    Um dragão negro com raio e trovão, assustam a todos com sua imensidão, um monstro alado que
-                    assusta a todos com seu rosnado, todos os conhecem como Elicius e se tiver sorte ele escutará
-                    seus suplicios.
-                </p>
-
-                <a href="#" target="_blank">
-                    <button class="botao-batalhar-inimigos">Batalhar</button>
-                </a>
-            </div>
-        </div>
+            </li>
+        </ul>
     </section>
 
 </main>

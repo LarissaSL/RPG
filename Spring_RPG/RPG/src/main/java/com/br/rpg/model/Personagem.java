@@ -1,20 +1,19 @@
 package com.br.rpg.model;
 
 public abstract class Personagem {
-    private String nome;
-    private int vida;
-    private int atq;
-    private int def;
+    protected String nome;
+    protected int vida;
+    protected int atq;
+    protected int def;
     private Atacar ataque;
     private Defender defende;
 
-    public Personagem(String nome, int vida, int atq, int def, Atacar ataque, Defender defende) {
+    public Personagem(String nome, int vida, int atq, int def) {
         this.nome = nome;
         this.vida = vida;
         this.atq = atq;
         this.def = def;
-        this.atacar = ataque;
-        this.defender = defende;
+
     }
 
     //pegue esse método no chatgpt para entender melhor como construí-los
