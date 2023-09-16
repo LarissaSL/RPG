@@ -24,25 +24,78 @@
 </head>
 <body>
 <!-- Nav do RPG -->
-<header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="http://localhost:5000">RPG</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="http://localhost:5000">Inicio</a>
-                    <a class="nav-link" href="http://localhost:5000/cadastro">Cadastro</a>
-                    <a class="nav-link" href="http://localhost:5000/batalha">Batalha</a>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="http://localhost:5000">RPG</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="http://localhost:5000">Inicio</a>
+                        <a class="nav-link" href="http://localhost:5000/cadastro">Cadastro</a>
+                        <a class="nav-link" href="http://localhost:5000/batalha">Batalha</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-</header>
-
+        </nav>
+    </header>
     <main>
+        <section>
+            <div class="chamadaBatalha">
+                <div class="jogador">
+                    <h3>Gladiadora Heroico</h3>
+                    <img src="/img/personagens/gladiadoraHeroico.png">
+                    <img src="/img/personagens/guerreiroSimbolo.png">
+                </div>
+                <span class="versus">VS</span>
+                <div class="inimigo">
+                    <h3>Minotauro</h3>
+                    <img src="/img/personagens/minotauro.png">
+                    <img src="/img/personagens/minotauroSimbolo.png">
+                </div>
+                <img src="/img/fundos/fundoRodadas.jpg">
+            </div>
+            <div class="statusBatalha">
+                <div>
+                    <h2 >Rodada 1</h2>
+                    <button>Atacar</button>
+                    <button>Defender</button>
+                </div>
+                <div>
+                    <div class="rodada">
+                        <h3>Nome do Jogador</h3>
+                        <p>Você Atacou!</p>
+                    </div>
+                    <div class="rodada">
+                        <h3>Minotauro</h3>
+                        <p>Minotauro Atacou!</p>
+                    </div>
+                </div>
+                <div class="placar">
+                    <h3>placar: Você 1 x 1 Minotauro</h3>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3>Parabéns Você Venceu! Vamos para a próxima etapa.</h3>
+                    <button>Jogar</button>
+                </div>
+                <div>
+                    <h3>Ah que pena, não foi dessa vez... Vamos tentar de novo?.</h3>
+                    <button>Jogar</button>
+                </div>
+                <div>
+                    <h3>Putz, empatou! Bora jogar de novo?</h3>
+                    <button>Jogar</button>
+                </div>
+                <div>
+                    <h4>Agora não...</h4>
+                    <button>Voltar</button>
+                </div>
+            </div>
+        </section>
         
 
     </main>
