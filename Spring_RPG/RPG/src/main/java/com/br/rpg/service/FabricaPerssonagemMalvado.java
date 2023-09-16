@@ -30,6 +30,8 @@ public class FabricaPerssonagemMalvado implements FabricaPersonagem {
         return new GuerreiroMalvado();
     }
 
+
+
     //    Classe abstrata para FabricaPerssonagemMalvado
     abstract class Mago{
         protected String classeMalvado;
@@ -40,6 +42,7 @@ public class FabricaPerssonagemMalvado implements FabricaPersonagem {
 
         public abstract String classeMalvado();
     } // FIZ COMO TESTE PARA VER SE SOME O ERRO DA CLASSE
+
 
     //    Classe concreta para FabricaPerssonagemMalvado
     class MagoMalvado extends Mago{

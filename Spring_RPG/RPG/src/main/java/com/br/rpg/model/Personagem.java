@@ -7,6 +7,7 @@ public abstract class Personagem {
     protected int def;
 
     //construtor
+    public Personagem(){}
     public Personagem(String nome, int vida, int atq, int def) {
         this.nome = nome;
         this.vida = vida;
