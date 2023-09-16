@@ -4,9 +4,9 @@ import com.br.rpg.model.Feiticeira;
 import com.br.rpg.model.Mago;
 
 public interface FabricaPersonagem {
- Guerreiro criarGuerreiro();
+ //Guerreiro criarGuerreiro();
  Mago criarMago();
- Gladiadora criarGladiadora();
+ //Gladiadora criarGladiadora();
  Feiticeira criarFeiticeira();
 
 }
