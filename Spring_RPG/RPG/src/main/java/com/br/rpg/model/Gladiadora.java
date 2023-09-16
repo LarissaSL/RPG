@@ -6,8 +6,8 @@ public class Gladiadora extends Personagem{
     private int ultimatoGolpe;
 //    UM ATAQUE EESPECIAL UNICO DO PERSONAGEM
 
-    public Gladiadora(String nome, int vida, int atq, int def,  Atacar ataque, Defender defende,int ultimatoGolpe){
-        super(nome, vida, atq, def, Atacar ataque, Defender defende);
+    public Gladiadora(String nome, int vida, int atq, int def, int ultimatoGolpe){
+        super(nome, vida, atq, def);
         this.ultimatoGolpe = ultimatoGolpe;
 
     }
