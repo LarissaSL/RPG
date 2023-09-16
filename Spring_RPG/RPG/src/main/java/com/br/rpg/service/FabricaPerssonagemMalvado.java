@@ -1,57 +1,72 @@
-package com.br.rpg.services;
+package com.br.rpg.service;
 
+import com.br.rpg.model.Feiticeira;
 import com.br.rpg.model.Gladiadora;
+import com.br.rpg.model.Guerreiro;
+import com.br.rpg.model.Mago;
+import com.br.rpg.service.FabricaPersonagem;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FabricaPerssonagemMalvado implements FabricaPersonagem{
+public class FabricaPerssonagemMalvado implements FabricaPersonagem {
 
     @Override
     public Mago criarMago(){
-        return new MagoMalvado;
+        return new MagoMalvado();
     }
 
     @Override
     public Gladiadora criarGladiadora(){
-        return new GladiadoraMalvada;
+        return new GladiadoraMalvado();
     }
 
     @Override
     public Feiticeira criarFeiticeira(){
-        return new FeiticeiraMalvada;
+        return new FeiticeiraMalvado();
     }
 
     @Override
     public Guerreiro criarGuerreiro(){
-        return new GuerreiroMalvado;
+        return new GuerreiroMalvado();
     }
+
+    //    Classe abstrata para FabricaPerssonagemMalvado
+    abstract class Mago{
+        protected String classeMalvado;
+
+        public Mago() {
+            this.classeMalvado = "Malvado";
+        }
+
+        public abstract String classeMalvado();
+    } // FIZ COMO TESTE PARA VER SE SOME O ERRO DA CLASSE
 
     //    Classe concreta para FabricaPerssonagemMalvado
     class MagoMalvado extends Mago{
         @Override
-        public String classeHeroi(){
-            return "Perssonagem" + this.classeHeroi() + ": Mago malvado";
+        public String classeMalvado(){
+            return "Perssonagem" + this.classeMalvado() + ": Mago";
         }
     }
 
-    class GladiadoraMalvada extends Gladiadora {
+    class GladiadoraMalvado extends Gladiadora {
         @Override
-        public String classeHeroi(){
-            return "Perssonagem" + this.classeHeroi() + ": Gladiadora malvada";
+        public String classeMalvado(){
+            return "Perssonagem" + this.classeMalvado() + ": Gladiadora";
         }
     }
 
-    class FeiticeiraMalvada extends Feiticeira{
+    class FeiticeiraMalvado extends Feiticeira{
         @Override
-        public String classeHeroi(){
-            return "Perssonagem" + this.classeHeroi() + ": Feiticeira malvada";
+        public String classeMalvado(){
+            return "Perssonagem" + this.classeMalvado() + ": Feiticeira";
         }
     }
 
     class GuerreiroMalvado extends Guerreiro{
         @Override
-        public String classeHeroi(){
-            return "Perssonagem" + this.classeHeroi() + ": Guerreiro malvado";
+        public String classeMalvado(){
+            return "Perssonagem" + this.classeMalvado() + ": Guerreiro";
         }
     }
 
