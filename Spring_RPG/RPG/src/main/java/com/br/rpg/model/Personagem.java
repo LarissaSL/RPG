@@ -16,8 +16,14 @@ public abstract class Personagem {
     }
 
     //métodos
-    public void realizarAtaque(){}
-    public void realizarDefeza(){}
+    public String realizarAtaquePersonagem(Personagem boss){
+        atq.executar (this,boss);
+        return "atacou";
+    }
+    public String realizarDefezaPersogem(Personagem boss){
+        def.executar(this,boss);
+        return "defendeu";
+    }
 
     //getters e setters
     public String getNome() {

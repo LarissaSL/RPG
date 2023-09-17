@@ -25,6 +25,16 @@ public class Boss  {
         this.descricao = descricao;
     }
 
+    //métodos
+    public String realizarAtaqueBoss(Boss personagem){
+        atq.executar(this,personagem);
+        return "atacou";
+    }
+    public String realizarDefezaBoss(Boss personagem){
+        def.executar(this,personagem);
+        return "defendeu";
+    }
+
     public int getId() {
         return id;
     }
