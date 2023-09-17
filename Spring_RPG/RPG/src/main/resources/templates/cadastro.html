@@ -54,35 +54,35 @@
             </p>
         </div>
 
-        <div class="seletores">
+        <form th:action="@{/cadastro}" method="post">
             <div class="jogador form-floating">
-                <input type="text" class="form-control" placeholder="nome do jogador">
+                <input type="text" class="form-control" placeholder="nome do jogador" name="nomeJogador">
                 <label>nome do jogador</label>
             </div>
             <div class="personagens">
-                <label for="personagens">Selecione seu personagem:</label>
-                <select id="personagens" class="form-select">
+                <label for="personagem">Selecione seu personagem:</label>
+                <select id="personagem" class="form-select" name="personagem">
                     <option selected>listar personagens...</option>
-                    <option value="1">Gladiadora</option>
-                    <option value="2">Guerreiro</option>
-                    <option value="3">Mago</option>
-                    <option value="4">Feiticeira</option>
+                    <option value="Gladiadora">Gladiadora</option>
+                    <option value="Guerreiro">Guerreiro</option>
+                    <option value="Mago">Mago</option>
+                    <option value="Feiticeira">Feiticeira</option>
                 </select>
             </div>
             <div class="personalidades">
-                <label for="personalidades">Selecione a personalidade</label>
-                <select id="personalidades" class="form-select">
+                <label for="personalidade">Selecione a personalidade</label>
+                <select id="personalidade" class="form-select" name="personalidade">
                     <option selected>escolher...</option>
-                    <option value="1">Heroico(a)</option>
-                    <option value="2">Malvado(a)</option>
+                    <option value="Heroico">Heroico(a)</option>
+                    <option value="Malvado">Malvado(a)</option>
                 </select>
             </div>
-        </div>
+            <div class="botoes">
+                <button type="button" class="btn btn-secondary btn-lg">Voltar</button>
+                <button type="submit" class="btn btn-primary btn-lg">Continuar</button>
+            </div>
+        </form>
 
-        <div class="botoes">
-            <button type="button" class="btn btn-secondary btn-lg">Voltar</button>
-            <button type="button" class="btn btn-primary btn-lg">Continuar</button>
-        </div>
     </section>
 </main>
 

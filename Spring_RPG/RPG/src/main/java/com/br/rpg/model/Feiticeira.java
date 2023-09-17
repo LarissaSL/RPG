@@ -1,11 +1,10 @@
 package com.br.rpg.model;
 
-public  class Feiticeira extends Personagem {
+public abstract class Feiticeira extends Personagem {
     public Feiticeira() {
     }
-
-    public Feiticeira(String nome, int vida, int atq, int def) {
-        super(nome, vida, atq, def);
+    public Feiticeira(String nome, int vida, int atq, int def, String personalidade) {
+        super(nome, vida, atq, def, personalidade);
     }
-
 }
+

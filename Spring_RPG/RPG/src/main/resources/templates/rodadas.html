@@ -45,9 +45,9 @@
         <section>
             <div class="chamadaBatalha">
                 <div class="jogador">
-                    <h3>Gladiadora Heroico</h3>
-                    <img src="/img/personagens/gladiadoraHeroico.png">
-                    <img src="/img/personagens/guerreiroSimbolo.png">
+                    <h3 th:text="${ultimoPersonagem.nome}"></h3>
+                    <img th:src="${ultimoPersonagem.caminhoDaImg}" alt="Imagem do Personagem">
+                    <img th:src="${ultimoPersonagem.caminhoDaImgSimbolo}" alt="Imagem do Símbolo">
                 </div>
                 <span class="versus">VS</span>
                 <div class="inimigo">
@@ -65,7 +65,7 @@
                 </div>
                 <div>
                     <div class="rodada">
-                        <h3>Nome do Jogador</h3>
+                        <h3 th:text="${ultimoPersonagem.nome}"></h3>
                         <p>Você Atacou!</p>
                     </div>
                     <div class="rodada">

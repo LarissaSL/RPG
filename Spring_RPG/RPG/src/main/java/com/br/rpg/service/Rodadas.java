@@ -1,5 +1,8 @@
 package com.br.rpg.service;
 
+import com.br.rpg.model.Boss;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class Rodadas {
@@ -19,6 +22,20 @@ public class Rodadas {
 
         }
         return 0;
+    }
+
+    public String mensagemFimDaBatalha(){
+        String mensagem;
+
+        if (pontoPersonagem > pontoBoss){
+            mensagem = "Parabéns Você Venceu! Vamos para a próxima etapa";
+        } else if (pontoPersonagem == pontoBoss){
+            mensagem = "Putz, empatou! Bora jogar de novo?";
+        } else {
+            mensagem = "Ah que pena, não foi dessa vez... Vamos tentar de novo?";
+        }
+
+        return mensagem;
     }
 }
 

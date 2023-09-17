@@ -25,13 +25,11 @@ public class Boss  {
         this.descricao = descricao;
     }
 
-    //métodos
-    public String realizarAtaqueBoss(Boss personagem){
-        atq.executar(this,personagem);
+    //métodos mesmo esquema só devolvendo a palavra atacou e defendeu
+    public String realizarAtaqueBoss(){
         return "atacou";
     }
-    public String realizarDefezaBoss(Boss personagem){
-        def.executar(this,personagem);
+    public String realizarDefezaBoss(){
         return "defendeu";
     }
 

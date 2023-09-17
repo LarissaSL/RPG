@@ -5,23 +5,25 @@ public abstract class Personagem {
     protected int vida;
     protected int atq;
     protected int def;
+    protected String personalidade;
+    protected String caminhoDaImg;
+    protected String caminhoDaImgSimbolo;
 
     //construtor
     public Personagem(){}
-    public Personagem(String nome, int vida, int atq, int def) {
+    public Personagem(String nome, int vida, int atq, int def, String personalidade) {
         this.nome = nome;
         this.vida = vida;
         this.atq = atq;
         this.def = def;
+        this.personalidade = personalidade;
     }
 
-    //métodos
-    public String realizarAtaquePersonagem(Personagem boss){
-        atq.executar (this,boss);
+    //métodos mexi aqui só devolvendo as palavras atacou e defendeu
+    public String realizarAtaquePersonagem(){
         return "atacou";
     }
-    public String realizarDefezaPersogem(Personagem boss){
-        def.executar(this,boss);
+    public String realizarDefesaPersonagem(){
         return "defendeu";
     }
 
@@ -56,6 +58,30 @@ public abstract class Personagem {
 
     public void setDef(int def) {
         this.def = def;
+    }
+
+    public String getPersonalidade() {
+        return personalidade;
+    }
+
+    public void setPersonalidade(String personalidade) {
+        this.personalidade = personalidade;
+    }
+
+    public String getCaminhoDaImg() {
+        return this.caminhoDaImg;
+    }
+
+    public String getCaminhoDaImgSimbolo() {
+        return this.caminhoDaImgSimbolo;
+    }
+
+    public void setCaminhoDaImg(String caminhoDaImg) {
+        this.caminhoDaImg = caminhoDaImg;
+    }
+
+    public void setCaminhoDaImgSimbolo(String caminhoDaImgSimbolo) {
+        this.caminhoDaImgSimbolo = caminhoDaImgSimbolo;
     }
 }
 

@@ -7,9 +7,9 @@ import com.br.rpg.model.Mago;
 
 
 public interface FabricaPersonagem {
-  Guerreiro criarGuerreiro();
-  Mago criarMago();
-  Gladiadora criarGladiadora();
-  Feiticeira criarFeiticeira();
+  Guerreiro criarGuerreiro(String nome);
+  Mago criarMago(String nome);
+  Gladiadora criarGladiadora(String nome);
+  Feiticeira criarFeiticeira(String nome);
 
 }
