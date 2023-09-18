@@ -52,7 +52,7 @@
                 <span class="versus">VS</span>
                 <div class="inimigo">
                     <h3>Minotauro</h3>
-                    <img src="/img/personagens/minotauro.png">
+                    <img th:src="${bossAtual.caminhoDaImg}">
                     <img src="/img/personagens/minotauroSimbolo.png">
                 </div>
                 <img src="/img/fundos/fundoRodadas.jpg">
@@ -60,12 +60,14 @@
             <div class="statusBatalha">
                 <div>
                     <h2 >Rodada 1</h2>
+                                        <!--  th:text=" 'Rodada' + ${numeroRodada} "-->
                     <button>Atacar</button>
                     <button>Defender</button>
                 </div>
                 <div>
                     <div class="rodada">
                         <h3 th:text="${ultimoPersonagem.nome}"></h3>
+                        <h3 th:text="${bossAtual.nome} + 'BOTEI O NOME AQUIIIIIII'"></h3>
                         <p>Você Atacou!</p>
                     </div>
                     <div class="rodada">

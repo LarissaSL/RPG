@@ -19,14 +19,6 @@ public abstract class Personagem {
         this.personalidade = personalidade;
     }
 
-    //métodos mexi aqui só devolvendo as palavras atacou e defendeu
-    public String realizarAtaquePersonagem(){
-        return "atacou";
-    }
-    public String realizarDefesaPersonagem(){
-        return "defendeu";
-    }
-
     //getters e setters
     public String getNome() {
         return nome;

@@ -25,13 +25,6 @@ public class Boss  {
         this.descricao = descricao;
     }
 
-    //métodos mesmo esquema só devolvendo a palavra atacou e defendeu
-    public String realizarAtaqueBoss(){
-        return "atacou";
-    }
-    public String realizarDefezaBoss(){
-        return "defendeu";
-    }
 
     public int getId() {
         return id;

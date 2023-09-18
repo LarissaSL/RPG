@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class HomeController {
@@ -96,13 +97,37 @@ public class HomeController {
     @GetMapping("/rodada")
     public String rodada(Model model) {
 
+        List<Boss> bosses = bossService.listarTodos();
+        model.addAttribute("bosses", bosses);
+
         List<Personagem> personagens = personagemRepository.listarTodos();
         if (!personagens.isEmpty()) {
             Personagem ultimoPersonagem = personagens.get(personagens.size() - 1);
             model.addAttribute("ultimoPersonagem", ultimoPersonagem);
         }
+        /*Essa parte do Codigo vai dentro de um IF, Se a vitoria for igual a S então
+        o bosses.get(0) tem que incrementar 1 se não inicia do 0
+        Boss bossAtual = bosses.get(2);
+        model.addAttribute("bossAtual", bossAtual);
+        */
 
 
         return "rodadas";
+    }
+
+    //Criar o PostMapping do rodadas, para ter dinamismo na pagina
+    @PostMapping("/rodada")
+    public String rodada(@RequestParam("acaoJogador") int acaoJogador){
+        /* Aqui entra as opções do Usuario de atk e defesa
+        2 - Chamar o metodo da Classe Rodada que tem o sistema de Pontuar
+        3 - Mostra a mensagem do que rolou nessa rodada (ex.Minotauro atacou!)
+
+        4 - Repete o passo 1 ao 3 por 3 vezes
+        5 - Quando for a 3 rodada tem que mostrar se você ganhou, perdeu ou empatou e ai modificar
+        o Boss se necessario vai logica do IF dnv
+         */
+
+        return "redirect:/rodada?acao=true";
+
     }
 }
