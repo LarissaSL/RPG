@@ -73,24 +73,24 @@ public class Rodadas {
             if ("atacar".equals(acaoBossEscolhida)) {
                 this.pontoPersonagem++;
                 this.pontoBoss++;
-                return "Você atacou e o Boss também!";
+                return "Resultado da Rodada: Você atacou e o Boss também!";
             } else {
                 this.pontoBoss++;
-                return "Você atacou, mas o Boss defendeu seu ataque.";
+                return "Resultado da Rodada: Você atacou, mas o Boss defendeu seu ataque.";
             }
         } else {
             if ("atacar".equals(acaoBossEscolhida)) {
                 this.pontoPersonagem++;
-                return "O Boss te atacou mas você defendeu.";
+                return "Resultado da Rodada: O Boss te atacou mas você defendeu.";
             } else {
-                return "Nenhum dos dois atacou.";
+                return "Resultado da Rodada: Nenhum dos dois atacou.";
             }
         }
 
     }
 
     public boolean rodadaConcluida() {
-        return rodadaAtual > 3;
+        return rodadaAtual > 4;
     }
 
 

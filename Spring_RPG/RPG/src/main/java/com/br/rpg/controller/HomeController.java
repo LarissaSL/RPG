@@ -104,7 +104,9 @@ public class HomeController {
     @GetMapping("/rodada")
     public String mostrarRodada(Model model) {
         rodadas.carregarDadosComuns(model);
+        rodadas.setRodadaAtual(1);
         model.addAttribute("rodadaAtual", rodadas.getRodadaAtual());
+        rodadas.setRodadaAtual(rodadas.getRodadaAtual() + 1);
         return "rodadas";
     }
 
@@ -128,15 +130,8 @@ public class HomeController {
 
         return "rodadas";
 
-        /*
-        * Quase lá, primeiro ta indo Rodada1 e os botoes de Atk e Def
-        *  Cliquei volta pro Rodada 1 e os Botoes atk e Def
-        * Rodada2 mensagem do que rolou e os botoes de Atk e Def
-        * Rodada 3 mensagem do que rolou e os botoes de atk e def + FIm de Jogo
-        * Só funciona direitinho o Fluxo de Rodada 1, Rodada 2 e Rodada 3 se eu jpá tiver feito uma luta
-        * Coisas a Resolver
-        * 1 - Arrumar o Fluxo das Rodadas(1, 2 e depois a 3, sendo que na 3 tira os botoes de atk e def
-        * 2 - Ver a sobre atualização do Boss caso ganhe e caso perca/empate um botão de tentar de novo*/
+
+        // 1 - Ver a sobre atualização do Boss caso ganhe e caso perca/empate um botão de tentar de novo
     }
 }
 

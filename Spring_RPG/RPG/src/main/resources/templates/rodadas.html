@@ -71,7 +71,16 @@
                     </form>
                 </div>
 
-                <div th:if="${rodadaAtual > 1}">
+                <div th:if="${rodadaAtual == 2}">
+                    <h4 th:text="'Rodada' + ${rodadaAtual}"></h4>
+                    <p th:text="${mensagemRodada}"></p>
+                    <form action="/rodada" method="post">
+                        <button type="submit" name="acaoJogador" value="atacar">Ataque</button>
+                        <button type="submit" name="acaoJogador" value="defender">Defesa</button>
+                    </form>
+                </div>
+
+                <div th:if="${rodadaAtual == 3}">
                     <h4 th:text="'Rodada' + ${rodadaAtual}"></h4>
                     <p th:text="${mensagemRodada}"></p>
                     <form action="/rodada" method="post">
