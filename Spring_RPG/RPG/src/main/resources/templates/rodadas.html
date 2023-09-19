@@ -51,54 +51,46 @@
                 </div>
                 <span class="versus">VS</span>
                 <div class="inimigo">
-                    <h3>Minotauro</h3>
-                    <img th:src="${bossAtual.caminhoDaImg}">
-                    <img src="/img/personagens/minotauroSimbolo.png">
+                    <h3 th:text="${bossAtual.nome}"></h3>
+
                 </div>
                 <img src="/img/fundos/fundoRodadas.jpg">
             </div>
+
             <div class="statusBatalha">
-                <div>
-                    <h2 >Rodada 1</h2>
-                                        <!--  th:text=" 'Rodada' + ${numeroRodada} "-->
-                    <button>Atacar</button>
-                    <button>Defender</button>
+                <div class="rodada">
+                    <h3 th:text="${ultimoPersonagem.nome}"></h3>
+                    <h3 th:text="${bossAtual.nome}"></h3>
+                </div>
+
+                <div th:if="${rodadaAtual == 1}">
+                    <h4>Rodada 1</h4>
+                    <form action="/rodada" method="post">
+                        <button type="submit" name="acaoJogador" value="atacar">Ataque</button>
+                        <button type="submit" name="acaoJogador" value="defender">Defesa</button>
+                    </form>
+                </div>
+
+                <div th:if="${rodadaAtual > 1}">
+                    <h4 th:text="'Rodada' + ${rodadaAtual}"></h4>
+                    <p th:text="${mensagemRodada}"></p>
+                    <form action="/rodada" method="post">
+                        <button type="submit" name="acaoJogador" value="atacar">Ataque</button>
+                        <button type="submit" name="acaoJogador" value="defender">Defesa</button>
+                    </form>
+                </div>
+
+
+                <div th:if="${mensagemFimDeJogo}">
+                    <h2>Fim de Jogo</h2>
+                    <p th:text="${mensagemFimDeJogo}"></p>
                 </div>
                 <div>
-                    <div class="rodada">
-                        <h3 th:text="${ultimoPersonagem.nome}"></h3>
-                        <h3 th:text="${bossAtual.nome} + 'BOTEI O NOME AQUIIIIIII'"></h3>
-                        <p>Você Atacou!</p>
-                    </div>
-                    <div class="rodada">
-                        <h3>Minotauro</h3>
-                        <p>Minotauro Atacou!</p>
-                    </div>
-                </div>
-                <div class="placar">
-                    <h3>placar: Você 1 x 1 Minotauro</h3>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <h3>Parabéns Você Venceu! Vamos para a próxima etapa.</h3>
-                    <button>Jogar</button>
-                </div>
-                <div>
-                    <h3>Ah que pena, não foi dessa vez... Vamos tentar de novo?.</h3>
-                    <button>Jogar</button>
-                </div>
-                <div>
-                    <h3>Putz, empatou! Bora jogar de novo?</h3>
-                    <button>Jogar</button>
-                </div>
-                <div>
-                    <h4>Agora não...</h4>
-                    <button>Voltar</button>
+
                 </div>
             </div>
         </section>
-        
+
 
     </main>
 
