@@ -14,6 +14,9 @@ public class Rodadas {
     private int pontoPersonagem;
     private int pontoBoss;
     private int rodadaAtual;
+    private int indiceDoBoss;
+
+    private boolean atualizarBoss;
     private final PersonagemRepository personagemRepository;
     private final BossService bossService;
 
@@ -34,10 +37,25 @@ public class Rodadas {
         List<Boss> bosses = bossService.listarTodos();
         model.addAttribute("bosses", bosses);
 
-        Boss bossAtual = bosses.get(2);
+        Boss bossAtual = bosses.get(getIndiceDoBoss());
         model.addAttribute("bossAtual", bossAtual);
     }
 
+    public int getIndiceDoBoss() {
+        return indiceDoBoss;
+    }
+
+    public void setIndiceDoBoss(int indiceDoBoss) {
+        this.indiceDoBoss = indiceDoBoss;
+    }
+
+    public void setPontoPersonagem(int pontoPersonagem) {
+        this.pontoPersonagem = pontoPersonagem;
+    }
+
+    public void setPontoBoss(int pontoBoss) {
+        this.pontoBoss = pontoBoss;
+    }
 
     public int getPontoPersonagem() {
         return pontoPersonagem;
@@ -81,7 +99,7 @@ public class Rodadas {
         } else {
             if ("atacar".equals(acaoBossEscolhida)) {
                 this.pontoPersonagem++;
-                return "Resultado da Rodada: O Boss te atacou mas você defendeu.";
+                return "Resultado da Rodada: O Boss te atacou mas você defendeu." ;
             } else {
                 return "Resultado da Rodada: Nenhum dos dois atacou.";
             }
@@ -89,8 +107,9 @@ public class Rodadas {
 
     }
 
+    //Resetar os pontos do Boss e Personagem caso a rodadaAtual seja > 4
     public boolean rodadaConcluida() {
-        return rodadaAtual > 4;
+        return this.rodadaAtual > 4;
     }
 
 
@@ -98,14 +117,33 @@ public class Rodadas {
         String mensagem;
 
         if (pontoPersonagem > pontoBoss) {
-            mensagem = "Parabéns Você Venceu! Vamos para a próxima etapa";
+            if (getIndiceDoBoss() + 1 > 2){
+                mensagem = "Parabéns você concluido sua jornada e provou seu valor! Bora repetir?!";
+                this.atualizarBoss = false;
+                setIndiceDoBoss(0);
+            } else {
+                mensagem = "Parabéns Você Venceu! Vamos para a próxima etapa";
+                this.atualizarBoss = true;
+            }
         } else if (pontoPersonagem == pontoBoss) {
-            mensagem = "Putz, empatou! Bora jogar de novo?";
+            mensagem = "Putz, empatou! Bora jogar de novo?" ;
+            this.atualizarBoss = false;
         } else {
             mensagem = "Ah que pena, não foi dessa vez... Vamos tentar de novo?";
+            this.atualizarBoss = false;
         }
-
         return mensagem;
+    }
+
+    public void definirBoss() {
+        if (atualizarBoss && indiceDoBoss < 2) {
+            this.indiceDoBoss++;
+        }
+    }
+
+    public void resetarPontos(){
+        setPontoPersonagem(0);
+        setPontoBoss(0);
     }
 
 }

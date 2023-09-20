@@ -52,14 +52,6 @@ public abstract class Personagem {
         this.def = def;
     }
 
-    public String getPersonalidade() {
-        return personalidade;
-    }
-
-    public void setPersonalidade(String personalidade) {
-        this.personalidade = personalidade;
-    }
-
     public String getCaminhoDaImg() {
         return this.caminhoDaImg;
     }

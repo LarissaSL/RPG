@@ -103,8 +103,11 @@ public class HomeController {
 
     @GetMapping("/rodada")
     public String mostrarRodada(Model model) {
+        /*Carregando os Dados em Comum de Personagem e Boss, definindo a rodada como 1 toda vez que entra na pag
+        e definindo pro 1 boss*/
         rodadas.carregarDadosComuns(model);
         rodadas.setRodadaAtual(1);
+
         model.addAttribute("rodadaAtual", rodadas.getRodadaAtual());
         rodadas.setRodadaAtual(rodadas.getRodadaAtual() + 1);
         return "rodadas";
@@ -117,21 +120,24 @@ public class HomeController {
         }
 
         model.addAttribute("rodadaAtual", rodadas.getRodadaAtual());
-        String mensagemRodada = rodadas.realizarRodada(acaoJogador);
-        model.addAttribute("mensagemRodada", mensagemRodada);
+        //Garantir que só realize uma rodada quando houver a seleção de ação , ou seja, depois da 1 rodada
+        if (rodadas.getRodadaAtual() > 1){
+            String mensagemRodada = rodadas.realizarRodada(acaoJogador);
+            model.addAttribute("mensagemRodada", mensagemRodada);
+        }
 
         if (rodadas.rodadaConcluida()) {
             String mensagemFimDeJogo = rodadas.mensagemFimDaBatalha();
             model.addAttribute("mensagemFimDeJogo", mensagemFimDeJogo);
             rodadas.setRodadaAtual(1);
+            rodadas.definirBoss();
+            rodadas.resetarPontos();
         }
 
         rodadas.carregarDadosComuns(model);
 
         return "rodadas";
 
-
-        // 1 - Ver a sobre atualização do Boss caso ganhe e caso perca/empate um botão de tentar de novo
     }
 }
 

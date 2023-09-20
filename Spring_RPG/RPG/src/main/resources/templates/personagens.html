@@ -10,7 +10,7 @@
     <ul>
         <li th:each="personagem : ${personagens}">
             <h2 th:text="${personagem.nome}"></h2>
-            <img th:src="${personagem.caminhoDaImg}" th:alt="${personagem.getCaminhoDaImg()}" />
+            <img th:src="${personagem.caminhoDaImg}" th:alt="${personagem.caminhoDaImg}" />
             <p th:text="'Vida: ' + ${personagem.vida}"></p>
             <p th:text="'Ataque: ' + ${personagem.atq}"></p>
             <p th:text="'Defesa: ' + ${personagem.def}"></p>
