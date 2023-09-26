@@ -91,17 +91,17 @@ public class Rodadas {
             if ("atacar".equals(acaoBossEscolhida)) {
                 this.pontoPersonagem++;
                 this.pontoBoss++;
-                return "Resultado da Rodada: Você atacou e o Boss também!";
+                return "Resultado da Rodada: Você atacou e o Boss revidou!";
             } else {
                 this.pontoBoss++;
-                return "Resultado da Rodada: Você atacou, mas o Boss defendeu seu ataque.";
+                return "Resultado da Rodada: Você deu a investida e o boss a defendida.";
             }
         } else {
             if ("atacar".equals(acaoBossEscolhida)) {
                 this.pontoPersonagem++;
                 return "Resultado da Rodada: O Boss te atacou mas você defendeu." ;
             } else {
-                return "Resultado da Rodada: Nenhum dos dois atacou.";
+                return "Resultado da Rodada: Vocês não se bateram, os dois se defenderam!.";
             }
         }
 
@@ -118,18 +118,20 @@ public class Rodadas {
 
         if (pontoPersonagem > pontoBoss) {
             if (getIndiceDoBoss() + 1 > 2){
-                mensagem = "Parabéns você concluido sua jornada e provou seu valor! Bora repetir?!";
+                mensagem = "Parabéns você concluiu! Mostrou para todos que conseguiu. Agora que você é o mais forte " +
+                        "porque não tentar mais uma vez a sorte?";
                 this.atualizarBoss = false;
                 setIndiceDoBoss(0);
             } else {
-                mensagem = "Parabéns Você Venceu! Vamos para a próxima etapa";
+                mensagem = "Parabéns você venceu e a próxima etapa mereceu! Já que está a todo vapor porque não mostrar " +
+                        "mais uma vez o seu valor?";
                 this.atualizarBoss = true;
             }
         } else if (pontoPersonagem == pontoBoss) {
-            mensagem = "Putz, empatou! Bora jogar de novo?" ;
+            mensagem = "Eita, o que rolou? Seu jogo empatou!" ;
             this.atualizarBoss = false;
         } else {
-            mensagem = "Ah que pena, não foi dessa vez... Vamos tentar de novo?";
+            mensagem = "Ah que pena, não foi dessa vez... porque não tentar mais uma vez?";
             this.atualizarBoss = false;
         }
         return mensagem;

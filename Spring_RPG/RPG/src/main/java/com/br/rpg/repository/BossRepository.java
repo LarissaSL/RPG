@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
 @Repository
 public class BossRepository {
     private final List<Boss> bossList = new ArrayList<>();

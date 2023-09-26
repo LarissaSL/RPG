@@ -1,5 +1,8 @@
 package com.br.rpg.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 public abstract class Personagem {
     protected String nome;
     protected int vida;

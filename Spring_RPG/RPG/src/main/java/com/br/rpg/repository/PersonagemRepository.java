@@ -2,7 +2,6 @@ package com.br.rpg.repository;
 
 import com.br.rpg.model.*;
 import com.br.rpg.service.FabricaPersonagemHeroico;
-import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
