@@ -1,0 +1,89 @@
+    /*SESÇÃO PRINCIPAL*/
+.container-bemvindo{
+    background-image: url("../img/fundos/fundoIndex.jpg");
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    background-attachment: scroll;
+    color: white;
+    height: 26rem;
+    text-align: center;
+}
+
+    /*SESÇÃO PRINCIPAL - SUBTITULO*/
+.titulo-tx, .tx-malvado{
+    font-size: 22px;
+}
+
+    /*TEXTO DA SESÇÃO PRINCIPAL*/
+.tx-pincipal{
+    font-size: 18px;
+}
+
+    /*ESTILO DO TEXTO SOBRE OS PERSSONAGENS MALVADOS*/
+.tx-malvado{
+    font-style: italic
+}
+
+    /*BOTÕES*/
+.bt-criarP{
+    background-color:#BD53B9;
+    color: aliceblue;
+    border-radius: 0.3rem;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 20%;
+    height: 2.5rem;
+    font-size: 20px;
+}
+
+    /*CENTRALIZANDO OS TEXTOS DO MAGO, GUERREIRO E MALVADO*/
+.tx-mag, .tx-guerr, .tx-malvado{
+    text-align: center;
+}
+
+    /*TITULO DO MAGO E DO GUERREIRO*/
+.tituloMag, .tituloGuerr{
+    font-size: 50px;
+
+}
+/* SECTIONs DE MAGO, GUERREIRO E MALVADO*/
+.container-mag, .container-guerreiro, .container-malvado{
+    background-color: #A64241;
+    color: aliceblue;
+}
+    /*FUNDO DO GUERREIRO*/
+.container-guerreiro{
+    background-color: #3D2B2A;
+}
+
+    /*TEXTO DE DESCRIÇÃO DO MAGO E GUERREIRO*/
+.descriMag, .descriGuerr{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 45%;
+}
+
+    /*MARGEM DA DESCRIÇÃO DO GUERREIRO*/
+.descriGuerr{
+    margin-left: 2.7rem ;
+}
+
+    /*IMAGEM E TEXTO UM DO LADO DO OUTRO, FEITICEIRA E GLADIADORA*/
+.imgFeit, .descriMag, .imgGlad, .descriGuerr{
+    display: inline-block;
+}
+
+    /*TAMANHO DOS ICONES*/
+.iconMag, .iconGuerr{
+    height: 60px;
+}
+
+    /*COLOCANDO O ICONE DO LADO DO TITULO, MAGO E GUERREIRO*/
+.tituloMag, .iconMag, .tituloGuerr, .iconGuerr{
+    display: inline-block;
+
+}
