@@ -25,37 +25,10 @@
 
 </head>
 <body>
-<!-- Nav do RPG -->
-<header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="http://localhost:5000">RPG</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="http://localhost:5000">Inicio</a>
-                    <a class="nav-link" href="http://localhost:5000/cadastro">Cadastro</a>
-                    <a class="nav-link" href="http://localhost:5000/batalha">Batalha</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
+
 <main>
     <section>
-        <div class="chamadaBatalha">
-            <div class="jogador">
-                <h3 th:text="${ultimoPersonagem.nome}"></h3>
-                <img th:src="${ultimoPersonagem.caminhoDaImg}" alt="Imagem do Personagem">
-                <img th:src="${ultimoPersonagem.caminhoDaImgSimbolo}" alt="Imagem do Símbolo">
-            </div>
-
-            <img src="/img/fundos/fundoRodadas.jpg">
-        </div>
-
+        <img class="imgRodada" src="/img/fundos/fundoRodadas.jpg">
 
         <div th:if="${rodadaAtual == 1}">
             <h3 th:text="${bossAtual.nome}"></h3>
@@ -104,20 +77,11 @@
                 <button th:class="botao-continuar">Continuar</button>
             </a>
         </div>
-
     </section>
 
 
 </main>
 
-<!-- Footer do RPG -->
-<footer class="rodape">
-    <div>
-        <span>© 2023 Copyright: ManasCode</span>
-        <a href="#">Larissa</a>
-        <a href="#">Giulina</a>
-        <a href="#">Silvana</a>
-    </div>
-</footer>
+
 </body>
 </html>
