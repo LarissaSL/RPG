@@ -85,11 +85,11 @@ public class HomeController {
     }
 
 
-    @GetMapping("/batalha")
+    @GetMapping("/inimigos")
     public String batalha(Model model) {
         List<Boss> bosses = bossService.listarTodos();
         model.addAttribute("bosses", bosses);
-        return "batalha";
+        return "inimigos";
     }
 
     @GetMapping("/personagem")
