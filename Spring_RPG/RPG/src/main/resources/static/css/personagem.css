@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Macondo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Macondo', cursive;
+    background-color: #00001C;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Berkshire Swash', cursive;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    width: 70%;
+    font-size: 1.2rem;
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+button:hover{
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 1.1rem;
+}
+
+.container{
+    background-color: aliceblue;
+    border-radius: 4rem;
+    width: auto;
+    height: 80vh;
+    padding: 4rem;
+    margin: 2rem;
+}
+
+.nome{
+    font-size: 2rem;
+}
+
+.img-icon {
+    position: absolute;
+    width: 45vh;
+    height: auto;
+    z-index: 1;
+    top: 10rem;
+    left: 5rem;
+    opacity: 70%;
+}
+
+.img-cadastro {
+    width: 30vh;
+    position: relative;
+    z-index: 2;
+}
+
+.informacoes {
+    display: block;
+    width: auto;
+    margin: 3rem;
+    margin-top: 4rem;
+    padding-left: 5rem;
+}
+
+li{
+    display: flex;
+}
+
+.atributo {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 3rem;
+    }
+
+    .informacoes {
+        margin: 5rem;
+    }
+
+    .img-icon {
+        width: 50vh;
+        top: 10rem; /
+    }
+
+    .img-cadastro {
+        width: 40vh;
+    }
+
+    .atributo {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        padding: 4rem;
+        width: auto;
+    }
+
+    .informacoes {
+        margin: 8rem;
+    }
+
+    .img-icon {
+        width: 55vh;
+        top: 10rem;
+    }
+
+    .img-cadastro {
+        width: 40vh;
+    }
+
+    .atributo {
+        font-size: 1.6rem;
+    }
+
+    button{
+        width: 8rem;
+    }
+}
+

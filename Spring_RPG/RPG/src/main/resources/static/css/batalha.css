@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Macondo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Macondo', cursive;
+    background-color: #00001C;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Berkshire Swash', cursive;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    width: 50%;
+    font-size: 1.2rem;
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+button:hover{
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 1.1rem;
+}
+
+
+.container-1 {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.fundoBatalha {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 80%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.texto-apresentacao {
+    text-align: center;
+    color: #fff;
+    background-color: #24365e;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px 10px rgba(59, 94, 250, 0.5);
+    width: 80vh;
+    height: 45vh;
+    position: absolute;
+    margin: 25% 10rem 20% 48%;
+}
+
+.texto-apresentacao .titulo{
+    font-size: 4rem;
+    margin-top: 3rem;
+}
+
+.texto-apresentacao .sub-titulo{
+    font-size: 2.5rem;
+}
+
+.container-2 {
+    margin: 8rem;
+}
+
+.container-2 .inimigos{
+    color: #fff;
+    margin-left: 2rem;
+    margin-top:10rem;
+    font-size: 3rem;
+}
+
+.Minotauro, .Cerbero, .Elicius{
+    background-color: aliceblue;
+    margin: 3rem 2rem 0rem 0rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.icone-Minotauro, .icone-Cerbero, .icone-Elicius {
+    position: relative;
+    width: 1vh;
+    height: auto;
+}
+
+.img-icon-Minotauro, .img-icon-Cerbero, .img-icon-Elicius{
+    width: 70vh;
+    opacity: 70%;
+}
+
+.img-inimigo-Minotauro{
+    width: 55vh;
+    margin-right: 4rem;
+}
+
+.img-inimigo-Cerbero {
+    width: 65vh;
+    margin-right: -1rem;
+    margin-top: 2rem;
+}
+
+.img-inimigo-Elicius{
+    width: 65vh;
+    margin-right: -1rem;
+}
+
+.conteudo-Minotauro, .conteudo-Cerbero, .conteudo-Elicius{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.imagem-Minotauro, .imagem-Cerbero, .imagem-Elicius {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+}
+
+.texto-direita {
+    float: left;
+    display: block;
+    margin-left: 2rem;
+}
+
+.descricao-botao {
+    margin-top: 2rem;
+}
+
+.nome-boss{
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
+.dificuldade-boss-Facil{
+    background-color: #9fe29f;
+    border-radius: .4rem;
+    font-size: 1.5rem;
+    padding: .4rem;
+}
+
+.dificuldade-boss-Medio{
+    background-color: #e6e950;
+    border-radius: .4rem;
+    font-size: 1.5rem;
+    padding: .4rem;
+}
+
+.dificuldade-boss-Dificil{
+    background-color: #e96250;
+    border-radius: .4rem;
+    font-size: 1.5rem;
+    padding: .4rem;
+}
+
+.botao-batalhar{
+    margin-top: 2rem;
+}
+
+
+@media (min-width: 1200px) and (max-width: 1380) {
+
+
+    .fundoBatalha {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 90%);
+    }
+
+    .texto-apresentacao {
+        width: 70vh;
+        height: 45vh;
+        margin: 25% 10rem 20% 48%;
+    }
+
+    .texto-apresentacao .titulo{
+        margin-top: 3rem;
+    }
+
+    .Minotauro, .Cerbero, .Elicius{
+        width: 105%;
+    }
+
+    .descricao-botao {
+        margin-top: 2rem;
+        max-width: 95%;
+    }
+}
