@@ -18,7 +18,6 @@ public class BossService {
     }
 
     public List<Boss> listarTodos() {
-
         return bossRepository.listarTodos();
     }
 
@@ -27,12 +26,10 @@ public class BossService {
     }
 
     public Boss salvar(Boss boss) {
-
         return bossRepository.salvar(boss);
     }
 
     public void deletarPorId(int id) {
-
         bossRepository.deletarPorId(id);
     }
 }

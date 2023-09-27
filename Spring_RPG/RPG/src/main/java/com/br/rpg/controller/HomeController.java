@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class HomeController {
@@ -80,9 +81,7 @@ public class HomeController {
         // Salvar o novo personagem no repositório
         personagemRepository.salvar(novoPersonagem);
 
-        // Por enquanto mandei pra um HTML improvisado de Personagens só pra ver se ta salvando msm certo os cadastrados
-        //ALTERAR ISSO DEPOIS PRA IR DIRETO PRA PAGINA DE BATALHAS
-        return "redirect:/personagens";
+        return "redirect:/personagem";
     }
 
 
@@ -93,12 +92,18 @@ public class HomeController {
         return "batalha";
     }
 
-    //TEstar pra ver as instancias dos Personagens TIRAR DEPOIS
-    @GetMapping("/personagens")
+    @GetMapping("/personagem")
     public String listarPersonagens(Model model) {
-        List<Personagem> personagens = personagemRepository.listarTodos();
-        model.addAttribute("personagens", personagens);
-        return "personagens";
+        Optional<Personagem> personagemOpt = personagemRepository.encontrarUltimoCadastrado();
+
+        if (personagemOpt.isPresent()) {
+            Personagem personagem = personagemOpt.get();
+            model.addAttribute("personagem", personagem);
+        } else {
+            model.addAttribute("personagem", "Nenhum personagem cadastrado.");
+        }
+
+        return "personagem";
     }
 
     @GetMapping("/rodada")
@@ -128,7 +133,9 @@ public class HomeController {
 
         if (rodadas.rodadaConcluida()) {
             String mensagemFimDeJogo = rodadas.mensagemFimDaBatalha();
+            String statusFimDeJogo = rodadas.getStatusFimDaRodada();
             model.addAttribute("mensagemFimDeJogo", mensagemFimDeJogo);
+            model.addAttribute("statusFimDeJogo", statusFimDeJogo);
             rodadas.setRodadaAtual(1);
             rodadas.definirBoss();
             rodadas.resetarPontos();

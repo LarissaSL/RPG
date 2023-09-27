@@ -18,8 +18,11 @@ public class PersonagemService {
     }
 
     public List<Personagem> listarTodos() {
-
         return personagemRepository.listarTodos();
+    }
+
+    public Optional<Personagem> encontrarUltimoCadastrado() {
+        return personagemRepository.encontrarUltimoCadastrado();
     }
 
     public Optional<Personagem> listarPorNome(String nome) {
@@ -27,12 +30,10 @@ public class PersonagemService {
     }
 
     public Personagem salvar(Personagem personagem) {
-
         return personagemRepository.salvar(personagem);
     }
 
     public void deletarPorNome(String nome) {
-
         personagemRepository.deletarPorNome(nome);
     }
 }

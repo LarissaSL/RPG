@@ -17,15 +17,25 @@ public class PersonagemRepository {
     private String nextNome = "nome";
 
     //Construtor pra ter uma Feiticeira e poder trabalhar melhor no codigo sem precisar Cadastrar um Personagem
-    //Tirar esse construtor DPS
     public PersonagemRepository() {
         FabricaPersonagemHeroico fabricaHeroico = new FabricaPersonagemHeroico();
-        Personagem feiticeiroHeroico = fabricaHeroico.criarFeiticeira("FeiticeiraDefault");
+        Personagem feiticeiroHeroico = fabricaHeroico.criarFeiticeira("Feiticeira Bot");
         personagemList.add(feiticeiroHeroico);
     }
 
     public List<Personagem> listarTodos() {
         return personagemList;
+    }
+
+    public Optional<Personagem> encontrarUltimoCadastrado() {
+        List<Personagem> todosOsPersonagens = listarTodos();
+
+        if (!todosOsPersonagens.isEmpty()) {
+            Personagem ultimoCadastrado = todosOsPersonagens.get(todosOsPersonagens.size() - 1);
+            return Optional.of(ultimoCadastrado);
+        } else {
+            return Optional.empty();
+        }
     }
 
 
@@ -35,8 +45,8 @@ public class PersonagemRepository {
 
     public Personagem salvar(Personagem personagem) {
         if (personagem.getNome() == null || !existePersonagemComNome(personagem.getNome())) {
-            // Se o nome for nulo ou não existir um personagem com o mesmo nome, adiciona na lista, se tiver mesmo nome
-            //Não rola nada
+            /* Se o nome for nulo ou não existir um personagem com o mesmo nome, adiciona na lista, se tiver mesmo nome
+            Não acontece nada*/
             if (personagem.getNome() == null) {
                 personagem.setNome(nextNome);
             }

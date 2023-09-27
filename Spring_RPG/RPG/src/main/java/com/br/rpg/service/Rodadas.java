@@ -14,8 +14,9 @@ public class Rodadas {
     private int pontoPersonagem;
     private int pontoBoss;
     private int rodadaAtual;
-    private int indiceDoBoss;
 
+    private String statusFimDaRodada;
+    private int indiceDoBoss;
     private boolean atualizarBoss;
     private final PersonagemRepository personagemRepository;
     private final BossService bossService;
@@ -73,6 +74,14 @@ public class Rodadas {
         this.rodadaAtual = rodadaAtual;
     }
 
+    public String getStatusFimDaRodada() {
+        return statusFimDaRodada;
+    }
+
+    public void setStatusFimDaRodada(String statusFimDaRodada) {
+        this.statusFimDaRodada = statusFimDaRodada;
+    }
+
     public String realizarRodada(String acaoPersonagem) {
         Random rand = new Random();
         int acaoBoss = rand.nextInt(2);
@@ -121,18 +130,22 @@ public class Rodadas {
                 mensagem = "Parabéns você concluiu! Mostrou para todos que conseguiu. Agora que você é o mais forte " +
                         "porque não tentar mais uma vez a sorte?";
                 this.atualizarBoss = false;
+                setStatusFimDaRodada("(Vitória)");
                 setIndiceDoBoss(0);
             } else {
                 mensagem = "Parabéns você venceu e a próxima etapa mereceu! Já que está a todo vapor porque não mostrar " +
                         "mais uma vez o seu valor?";
                 this.atualizarBoss = true;
+                setStatusFimDaRodada("(Vitória)");
             }
         } else if (pontoPersonagem == pontoBoss) {
             mensagem = "Eita, o que rolou? Seu jogo empatou!" ;
             this.atualizarBoss = false;
+            setStatusFimDaRodada("(Empate)");
         } else {
             mensagem = "Ah que pena, não foi dessa vez... porque não tentar mais uma vez?";
             this.atualizarBoss = false;
+            setStatusFimDaRodada("(Derrota)");
         }
         return mensagem;
     }

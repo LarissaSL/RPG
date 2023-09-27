@@ -5,10 +5,10 @@
     <title>Lista de Personagens</title>
 </head>
 <body>
-<h1>Lista de Personagens</h1>
+<h1>Cadastro feito com Sucesso!</h1>
 
     <ul>
-        <li th:each="personagem : ${personagens}">
+        <li>
             <h2 th:text="${personagem.nome}"></h2>
             <img th:src="${personagem.caminhoDaImg}" th:alt="${personagem.caminhoDaImg}" />
             <p th:text="'Vida: ' + ${personagem.vida}"></p>
@@ -18,7 +18,7 @@
     </ul>
 
     <a href="batalha">
-        <button>Fluxo normal</button>
+        <button>Continuar</button>
     </a>
 </body>
 </html>

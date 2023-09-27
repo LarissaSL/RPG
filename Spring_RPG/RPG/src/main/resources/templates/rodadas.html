@@ -97,7 +97,7 @@
 
 
         <div th:if="${mensagemFimDeJogo}">
-            <h2>Fim de Jogo</h2>
+            <h2 th:text="'Fim de Jogo '+ ${statusFimDeJogo}"></h2>
             <p th:text="${mensagemRodada}"></p>
             <p th:text="${mensagemFimDeJogo}"></p>
             <a href="rodada">

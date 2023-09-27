@@ -51,9 +51,7 @@
         <h1 class="titulo">Batalhas</h1>
         <h3 class="sub-titulo">1 vs 1</h3>
 
-        <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, nisi iste ullam sequi
-            natus, modi laudantium consequuntur nemo nostrum unde, deleniti quia libero repellat repellendus repudiandae
-            maxime rem quas ipsum.</p>
+        <p class="descricao">Aqui sua jornada iniciará, descubra quais inimigos você enfrentará.</p>
 
         <a href="rodada">
             <button class="botao-batalhar-inimigos">Batalhar</button>
@@ -69,12 +67,12 @@
                 <img th:class="'img-icon-' + ${boss.nome}"
                      th:src="${boss.getCaminhoDaImgSimbolo()}"
                      th:alt="${boss.nome}">
-                <img class="img-inimigo-1" th:src="${boss.getCaminhoDaImg()}"
+                <img th:class="'img-inimigo-' + ${boss.nome}" th:src="${boss.getCaminhoDaImg()}"
                      th:alt="${boss.nome}">
 
                 <span class="nome-boss" th:text="${boss.nome}"></span>
                 <span class="dificuldade-boss" th:text="${boss.dificuldade}"></span>
-                <span class="vida-boss" th:text="'Vida' + ${boss.vida}"></span>
+                <span class="vida-boss" th:text="'Vida: ' + ${boss.vida}"></span>
                 <span class="descricao-boss" th:text="${boss.descricao}"></span>
 
                 <a href="rodada">
