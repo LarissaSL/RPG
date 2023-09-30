@@ -20,88 +20,105 @@
 
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/css/index.css">
-
 </head>
 <body>
-
-
-    <main>
-    <!-- INICIO DA PRIMEIRA SEÇÃO -  SESÇÃO PRINCIPAL -->
-        <section class="container-bemvindo">
-            <div class="tx-principal">
-               <h1><strong class="bemVindo"> Bem-vindo(a) <br> Ao Caminhos da Fantasia
-                   Lendas em conflito, uma aventura entre poções e espadas</strong></h1>
-                <br><br>
-               <p><strong class="titulo-tx">Explore um mundo cheios de aventuras e desafios.</strong> </p>
-                <br>
-               <p class="tx-pincipal">Escolha seu caminho como um mago habilidoso ou um gurreiro corajoso, ser malvado ou um honrado, para um caminho a trilhar e um enimigo a derrotar.</p>
-                <br><br>
-                <a href="/cadastro"><button class="bt-criarP" type="button" >Criar personagem</button></a>
+<!-- Nav do RPG -->
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://localhost:5000">RPG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="http://localhost:5000">Inicio</a>
+                    <a class="nav-link" href="http://localhost:5000/cadastro">Cadastro</a>
+                    <a class="nav-link" href="http://localhost:5000/batalha">Batalha</a>
+                </div>
             </div>
-        </section>
-
+        </div>
+    </nav>
+</header>
+<!-- Conteúdo Principal -->
+<main>
+    <section class="container-bemvindo">
+        <div class="tx-principal">
+           <h1><strong class="bemVindo"> Bem-vindo(a) <br> Ao Caminhos da Fantasia
+               Lendas em conflito, uma aventura entre poções e espadas</strong></h1>
+            <br><br>
+           <p><strong class="titulo-tx">Explore um mundo cheios de aventuras e desafios.</strong> </p>
+            <br>
+           <p class="tx-pincipal">Escolha seu caminho como um mago habilidoso ou um gurreiro corajoso, ser malvado ou um honrado, para um caminho a trilhar e um enimigo a derrotar.</p>
+            <br><br>
+            <a href="/cadastro"><button class="bt-criarP" type="button" >Criar personagem</button></a>
+        </div>
+    </section>
     <!-- INICIO DA SEGUNDA SEÇÃO -  SESÇÃO DE APRESENTAÇÃO DAS CLASSES/HABILIDADE DE PERSONAGEM -> MAGO -->
-        <section class="container-mag">
-            <div class="tx-mag">
-                <p class="tituloMag"><strong>Mago </strong></p>
-            <!--IMAGENS REFERENTE AO MAGO   -->
-                <img class="iconMag" src="/img/personagens/magoSimbolo.png" alt="Insígnia dos Magos">
-                <br>
+    <section class="container-mag">
+        <div class="tx-mag">
+            <p class="tituloMag"><strong>Mago </strong></p>
+        <!--IMAGENS REFERENTE AO MAGO   -->
+            <img class="iconMag" src="/img/personagens/magoSimbolo.png" alt="Insígnia dos Magos">
+            <br>
 
-                <img src="/img/personagens/feiticeiraHeroico.png" alt="Feiticeira Herico">
+            <img src="/img/personagens/feiticeiraHeroico.png" alt="Feiticeira Herico">
 
-                <p class="descriMag">  No reino da magia,<br> seu cajado a brilhar, em missões a embarcar,
-                    Com feitiços e encantos, destemido a lutar. Nos livros da magia, seu nome é eterno, Com poderes épicos, ele é um ser supremo. <br> Nas batalhas místicas, ele é um líder brilhante, Um mago heroico, com poderes deslumbrantes. Nas páginas da história, sua lenda se vem, O herói da magia, para sempre, se aventura.</p>
+            <p class="descriMag">  No reino da magia,<br> seu cajado a brilhar, em missões a embarcar,
+                Com feitiços e encantos, destemido a lutar. Nos livros da magia, seu nome é eterno, Com poderes épicos, ele é um ser supremo. <br> Nas batalhas místicas, ele é um líder brilhante, Um mago heroico, com poderes deslumbrantes. Nas páginas da história, sua lenda se vem, O herói da magia, para sempre, se aventura.</p>
 
-
-                <img class="imgMag" src="/img/personagens/magoHeroico.png" alt="Perssonagem - Mago Herico">
-
-            </div>
-            <a href="/cadastro"><button class="bt-criarP" type="button">Criar personagem</button></a> <br>
-        </section>
-
+            <img class="imgMag" src="/img/personagens/magoHeroico.png" alt="Perssonagem - Mago Herico">
+        </div>
+        <a href="/cadastro"><button class="bt-criarP" type="button">Criar personagem</button></a> <br>
+    </section>
     <!-- INICIO DA TERCEIRA SEÇÃO -  SESÇÃO DE APRESENTAÇÃO DAS CLASSES/HABILIDADE DE PERSONAGEM -> GUERREIRO -->
-        <section class="container-guerreiro">
-            <div class="tx-guerr">
+    <section class="container-guerreiro">
+        <div class="tx-guerr">
 
-                <p class="tituloGuerr"><strong>Guerreiro</strong></p>
-            <!--IMAGENS REFERENTE AO GUERREIRO   -->
-                <img class="iconGuerr" src="/img/personagens/guerreiroSimbolo.png" alt="Indígnia dos Grerreiros">
-                <br>
+            <p class="tituloGuerr"><strong>Guerreiro</strong></p>
+        <!--IMAGENS REFERENTE AO GUERREIRO   -->
+            <img class="iconGuerr" src="/img/personagens/guerreiroSimbolo.png" alt="Indígnia dos Grerreiros">
+            <br>
 
-                <img class="imgGlad" src="/img/personagens/gladiadoraHeroico.png" alt="Perssonagem - Gladiadora Heroico">
+            <img class="imgGlad" src="/img/personagens/gladiadoraHeroico.png" alt="Perssonagem - Gladiadora Heroico">
 
-                <p class="descriGuerr">>Com a armadura reluzente, ele parte para a luta,
-                    O guerreiro heroico, com coragem absoluta.
-                    Em campos de batalha, sua bravura resplandece,
-                    Um guardião implacável, nunca se esquece. <br>
-                    Honra e dever, ele marcha sem medo,
-                    Em seu coração, a justiça é seu credo.
-                    Nas histórias e lendas, seu nome ecoará,
-                    O guerreiro heroico, para sempre brilhará.o</p>
+            <p class="descriGuerr">>Com a armadura reluzente, ele parte para a luta,
+                O guerreiro heroico, com coragem absoluta.
+                Em campos de batalha, sua bravura resplandece,
+                Um guardião implacável, nunca se esquece. <br>
+                Honra e dever, ele marcha sem medo,
+                Em seu coração, a justiça é seu credo.
+                Nas histórias e lendas, seu nome ecoará,
+                O guerreiro heroico, para sempre brilhará.o</p>
 
-                <img class="imgGuerr" src="/img/personagens/guerreiroHeroico.png" alt="Perssonagem - Guerreiro Heroico">
-            </div>
-            <a href="/cadastro"><button class="bt-criarP" type="button">Criar personagem</button></a> <br>
-        </section>
+            <img class="imgGuerr" src="/img/personagens/guerreiroHeroico.png" alt="Perssonagem - Guerreiro Heroico">
+        </div>
+        <a href="/cadastro"><button class="bt-criarP" type="button">Criar personagem</button></a> <br>
+    </section>
 
-        <section class="container-malvado">
+    <section class="container-malvado">
 
-            <div>
-                <P class="tx-malvado">Ambas as habilidades, com poder deslumbrante,
-                    Têm um lado sombrio, que espreita adiante. <br>
-                    Cabe a você escolher em qual lado ficar,
-                    Mago ou Guerreiro, na luz a brilhar ou no lado sombrio a caminhar.</P>
-            </div>
-            <img class="malvado" src="/img/personagens/feiticeiraMalvado.png" alt="Perssonagem - Feiticeira Malvado ">
-            <img class="malvado" src="/img/personagens/magoMalvado.png" alt="Perssonagem - Mago Malvado">
-            <img class="malvado" src="/img/personagens/gladiadoraMalvado.png" alt="Perssonagem - Gladiadora Malvado ">
-            <img class="malvado" src="/img/personagens/guerreiroMalvado.png" alt="Perssonagem - Guerreiro Malvado">
-            <a href="/cadastro"><button class="bt-criarP" type="button">Criar personagem</button></a> <br>
-        </section>
-
-    </main>
-
-
+        <div>
+            <P class="tx-malvado">Ambas as habilidades, com poder deslumbrante,
+                Têm um lado sombrio, que espreita adiante. <br>
+                Cabe a você escolher em qual lado ficar,
+                Mago ou Guerreiro, na luz a brilhar ou no lado sombrio a caminhar.</P>
+        </div>
+        <img class="malvado" src="/img/personagens/feiticeiraMalvado.png" alt="Perssonagem - Feiticeira Malvado ">
+        <img class="malvado" src="/img/personagens/magoMalvado.png" alt="Perssonagem - Mago Malvado">
+        <img class="malvado" src="/img/personagens/gladiadoraMalvado.png" alt="Perssonagem - Gladiadora Malvado ">
+        <img class="malvado" src="/img/personagens/guerreiroMalvado.png" alt="Perssonagem - Guerreiro Malvado">
+        <a href="/cadastro"><button class="bt-criarP" type="button">Criar personagem</button></a> <br>
+    </section>
+</main>
+<!-- Footer do RPG -->
+<footer class="rodape">
+    <div>
+        <span>© 2023 Copyright: ManasCode</span>
+        <a href="#">Larissa</a>
+        <a href="#">Giulina</a>
+        <a href="#">Silvana</a>
+    </div>
+</footer>
 </body>
 </html>
