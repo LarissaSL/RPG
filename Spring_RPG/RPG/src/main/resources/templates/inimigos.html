@@ -63,7 +63,7 @@
 
                 <div class="texto-direita">
                     <h2 class="nome-boss" th:text="${boss.nome}"></h2>
-                    <span th:class="'dificuldade-boss-' + ${boss.dificuldade}">Facil</span>
+                    <span th:class="'dificuldade-boss-' + ${boss.dificuldade}" th:text="${boss.dificuldade}"></span>
 
                     <div class="descricao-botao">
                         <span class="descricao-boss" th:text="${boss.descricao}"></span>
