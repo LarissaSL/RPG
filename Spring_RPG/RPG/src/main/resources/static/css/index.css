@@ -1,3 +1,8 @@
+    /*cor de fundo*/
+main{
+    background-color: #210325;
+}
+
     /*SESÇÃO PRINCIPAL*/
 .container-bemvindo{
     background-image: url("../img/fundos/fundoIndex.jpg");
@@ -6,7 +11,7 @@
     background-size: cover;
     background-attachment: scroll;
     color: white;
-    height: 26rem;
+    height: 32rem;
     text-align: center;
 }
 
@@ -53,6 +58,8 @@
 .container-mag, .container-guerreiro, .container-malvado{
     background-color: #A64241;
     color: aliceblue;
+    border-radius: 2rem;
+    margin: 1rem;
 }
     /*FUNDO DO GUERREIRO*/
 .container-guerreiro{
@@ -69,7 +76,7 @@
 
     /*MARGEM DA DESCRIÇÃO DO GUERREIRO*/
 .descriGuerr{
-    margin-left: 2.7rem ;
+    margin-left: 1rem ;
 }
 
     /*IMAGEM E TEXTO UM DO LADO DO OUTRO, FEITICEIRA E GLADIADORA*/
