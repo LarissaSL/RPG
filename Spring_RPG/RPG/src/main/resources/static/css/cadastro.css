@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Macondo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Macondo', cursive;
+    background-color: #00001C;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Berkshire Swash', cursive;
+}
+
+li {
+    list-style: none;
+    margin-left: -2rem;
+}
+
+button {
+    width: auto;
+    font-size: 1rem;
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+button:hover{
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 1.1rem;
+}
+
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem;
+    padding: 0rem;
+    height: 100vh;
+    position: relative;
+}
+
+body{
+    background-color: #6053A9;
+}
+
+.container{
+    margin: 0rem;
+    padding: 0rem;
+    height: 20vh;
+}
+
+.fundo {
+    width: 55vh;
+    height: 55vh;
+    object-fit: cover;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 90%);
+}
+
+.container-textos {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 1rem;
+    margin: 2rem;
+    background-color:#210129;
+    border-radius: 2rem;
+    color: #fff;
+    z-index: 1;
+}
+
+
+.container-2{
+    margin: 25rem 2rem 5rem 2rem;
+    padding: 0rem;
+}
+
+
+.titulo{
+    text-align: center;
+}
+
+.textos{
+    margin: 2rem 2rem;
+    text-align: justify;
+}
+
+
+
+.personagem,
+.personalidade{
+    color: #fff;
+    margin-top: 2rem;
+}
+
+
+.voltar,
+.continuar {
+    display: inline-block;
+    width: 30vh;
+    margin: .7rem 2.5rem;
+    margin-top: 2rem;
+}
+
+.voltar{
+    background-color: #882b2b;
+    box-shadow: -2px 3px 0 #3d0b0b, -4px 6px 0 #000;
+    margin-top: 1rem;
+}
+
+.continuar{
+    background-color: #468018;
+    box-shadow: -2px 3px 0 #0d3d0b, -4px 6px 0 #000;
+}
+
+@media screen and (min-width: 375px){
+
+    .fundo {
+        width: 65vh;
+    }
+
+    .container-textos {
+        top: 62%;
+    }
+
+    .container-2{
+        margin: 18rem 2rem 5rem 2rem;
+        padding: 0rem;
+    }
+
+
+    .voltar,
+    .continuar {
+        width: 30vh;
+        margin: 1rem 0rem 1rem 4rem;
+    }
+
+    .continuar{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 375px){
+
+    .fundo {
+        width: 65vh;
+    }
+
+    .container-textos {
+        top: 62%;
+    }
+
+    .container-2{
+        margin: 18rem 2rem 5rem 2rem;
+        padding: 0rem;
+    }
+
+
+    .voltar,
+    .continuar {
+        width: 30vh;
+        margin: 1rem 0rem 1rem 4rem;
+    }
+
+    .continuar{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 425px){
+
+    .fundo {
+        width: 70vh;
+    }
+
+    .titulo{
+        margin-bottom: 2rem;
+    }
+
+    .container-textos {
+        margin-right: 3rem;
+    }
+
+    .container-2{
+        margin: 18rem 3rem 5rem 2rem;
+        padding: 0rem;
+    }
+
+
+    .voltar,
+    .continuar {
+        margin: 1rem 0rem 1rem 5.5rem;
+    }
+
+    .continuar{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .container{
+        height: auto;
+    }
+
+    .fundo {
+        width: 130vh;
+    }
+
+    .container-textos {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .titulo{
+        margin-bottom: 2rem;
+    }
+
+    .container-2{
+        margin: 17rem 2rem 5rem 4.5rem;
+        padding: 0rem;
+    }
+
+
+    .voltar,
+    .continuar {
+        margin-top: 3rem;
+        font-size: 1.3rem ;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+
+    .container{
+        height: auto;
+    }
+
+    .fundo {
+        width: 175vh;
+        height: 80vh;
+        top: 50%;
+    }
+
+    .container-textos {
+        width: 80%;
+        margin: 7rem auto;
+    }
+
+    .container-2{
+        margin: 12rem 2rem 5rem 6.5rem;
+    }
+
+    .voltar,
+    .continuar {
+        margin: 3rem 10rem;
+        font-size: 1.3rem ;
+    }
+
+    .voltar{
+        margin-left: 2rem;
+    }
+
+    .continuar{
+        margin-right: 2rem;
+        margin-left: 12.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1440px){
+
+    .fundo {
+        width: 240vh;
+        height: 110vh;
+        top: 50%;
+    }
+
+    .container-textos {
+        width: 80%;
+        margin: 15rem auto;
+    }
+
+    .sub-titulo{
+        font-size: 1.5rem;
+        max-width: 80%;
+        text-align: center;
+        margin: 0rem auto;
+    }
+
+    .container-2{
+        margin: 10rem 2rem 5rem 8rem;
+    }
+
+    .personagem,
+    .personalidade{
+        font-size: 2rem;
+    }
+
+    label, .form-select{
+        font-size: 1.5rem;
+    }
+
+    .voltar,
+    .continuar {
+        margin: 3rem 10rem;
+        font-size: 1.8rem ;
+    }
+
+    .voltar{
+        margin-left: 2rem;
+    }
+
+    .continuar{
+        margin-right: 2rem;
+        margin-left: 23rem;
+    }
+
+    button:hover{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1600px){
+
+    .fundo {
+        width: 199vh;
+        height: 90vh;
+    }
+
+    .container-textos {
+        width: 80%;
+        margin: 12rem auto;
+    }
+
+
+    .container-2{
+        margin: 10rem 2rem 5rem 40rem;
+    }
+
+    .personagem,
+    .personalidade{
+        font-size: 2rem;
+    }
+
+    label, .form-select{
+        font-size: 1.5rem;
+    }
+
+    .voltar,
+    .continuar {
+        margin: 3rem 0rem;
+        font-size: 1.8rem ;
+    }
+
+    .voltar{
+        margin-left: 2rem;
+    }
+
+    .continuar{
+        margin-right: 2rem;
+        margin-left: .5rem;
+    }
+
+    button:hover{
+        font-size: 2rem;
+    }
+}
