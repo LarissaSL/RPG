@@ -5,7 +5,7 @@ public class GladiadoraHeroico extends Gladiadora{
     }
 
     public GladiadoraHeroico(String nome) {
-        super(nome, 100, 30, 30, "Heroico");
+        super(nome, 100, 43, 30, "Heroico");
         setCaminhoDaImg("/img/personagens/gladiadoraHeroico.png");
         setCaminhoDaImgSimbolo("/img/personagens/guerreiroSimbolo.png");
     }

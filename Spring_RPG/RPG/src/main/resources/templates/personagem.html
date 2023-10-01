@@ -53,7 +53,7 @@
             </div>
 
             <div class="personagem">
-                <img class="img-cadastro" th:src="${personagem.caminhoDaImg}" th:alt="'Imagem' + ${personagem.nome}"/>
+                <img th:class="'img-cadastro-' + ${personagem.atq}" th:src="${personagem.caminhoDaImg}" th:alt="'Imagem' + ${personagem.nome}"/>
             </div>
 
 

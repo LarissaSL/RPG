@@ -44,53 +44,49 @@
     </nav>
 </header>
 <!-- Conteúdo Principal -->
-<main>
+<main class="container-principal">
     <section class="container">
-        <div class="textos">
-            <h1>Vamos começar? Então é hora de Cadastrar...</h1>
-            <p>Se você deseja batalhar, primeiro vai ter que se cadastrar, me diz aí o nome que vai usar,
-                o personagens que vai escolher e qual personalidade ele deve ter.
-            </p>
+        <img class="fundo" src="/img/fundos/calabouco.png" alt="fundo">
+        <div class="container-textos">
+            <div class="textos">
+                <h1 class="titulo">Vamos começar? Então é hora de Cadastrar...</h1>
+                <p class="sub-titulo">Se você deseja batalhar, primeiro vai ter que se cadastrar, me diz aí o nome que vai usar,
+                    o personagens que vai escolher e qual personalidade ele deve ter.
+                </p>
+            </div>
         </div>
 
-        <form th:action="@{/cadastro}" method="post">
-            <div class="jogador form-floating">
-                <input type="text" class="form-control" placeholder="nome do jogador" name="nomeJogador">
-                <label>nome do jogador</label>
-            </div>
-            <div class="personagens">
-                <label for="personagem">Selecione seu personagem:</label>
-                <select id="personagem" class="form-select" name="personagem">
-                    <option selected>listar personagens...</option>
-                    <option value="Gladiadora">Gladiadora</option>
-                    <option value="Guerreiro">Guerreiro</option>
-                    <option value="Mago">Mago</option>
-                    <option value="Feiticeira">Feiticeira</option>
-                </select>
-            </div>
-            <div class="personalidades">
-                <label for="personalidade">Selecione a personalidade</label>
-                <select id="personalidade" class="form-select" name="personalidade">
-                    <option selected>escolher...</option>
-                    <option value="Heroico">Heroico(a)</option>
-                    <option value="Malvado">Malvado(a)</option>
-                </select>
-            </div>
-            <div class="botoes">
-                <button type="button" class="btn btn-secondary btn-lg">Voltar</button>
-                <button type="submit" class="btn btn-primary btn-lg">Continuar</button>
+        <form action="/cadastro" method="post">
+            <div class="container-2">
+                <div class="jogador">
+                    <input type="text" class="form-control" id="nomeJogador" placeholder="Nome do Jogador" name="nomeJogador">
+                </div>
+
+                <div class="personagens">
+                    <label class="personagem" for="personagem">Selecione seu personagem</label>
+                    <select id="personagem" class="form-select" name="personagem">
+                        <option selected>listar personagens...</option>
+                        <option value="Gladiadora">Gladiadora</option>
+                        <option value="Guerreiro">Guerreiro</option>
+                        <option value="Mago">Mago</option>
+                        <option value="Feiticeira">Feiticeira</option>
+                    </select>
+                </div>
+                <div class="personalidades">
+                    <label class="personalidade" for="personalidade">Selecione a personalidade</label>
+                    <select id="personalidade" class="form-select" name="personalidade">
+                        <option selected>escolher...</option>
+                        <option value="Heroico">Heroico(a)</option>
+                        <option value="Malvado">Malvado(a)</option>
+                    </select>
+                </div>
+                <div class="botoes">
+                    <button type="submit" class="continuar">Continuar</button>
+                    <button type="button" class="voltar">Voltar</button>
+                </div>
             </div>
         </form>
     </section>
 </main>
-<!-- Footer do RPG -->
-<footer class="rodape">
-    <div>
-        <span>© 2023 Copyright: ManasCode</span>
-        <a href="#">Larissa</a>
-        <a href="#">Giulina</a>
-        <a href="#">Silvana</a>
-    </div>
-</footer>
 </body>
 </html>

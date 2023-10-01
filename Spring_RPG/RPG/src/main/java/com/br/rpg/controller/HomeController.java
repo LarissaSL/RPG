@@ -136,12 +136,13 @@ public class HomeController {
             String statusFimDeJogo = rodadas.getStatusFimDaRodada();
             model.addAttribute("mensagemFimDeJogo", mensagemFimDeJogo);
             model.addAttribute("statusFimDeJogo", statusFimDeJogo);
-            rodadas.setRodadaAtual(1);
-            rodadas.definirBoss();
             rodadas.resetarPontos();
-        }
+            rodadas.carregarDadosComuns(model);
+            rodadas.definirBoss();
 
-        rodadas.carregarDadosComuns(model);
+        } else {
+            rodadas.carregarDadosComuns(model);
+        }
 
         return "rodadas";
 

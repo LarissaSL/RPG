@@ -110,7 +110,7 @@ public class Rodadas {
                 this.pontoPersonagem++;
                 return "Resultado da Rodada: O Boss te atacou mas você defendeu." ;
             } else {
-                return "Resultado da Rodada: Vocês não se bateram, os dois se defenderam!.";
+                return "Resultado da Rodada: Vocês não se bateram, os dois se defenderam!";
             }
         }
 
