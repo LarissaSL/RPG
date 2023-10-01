@@ -1,96 +1,511 @@
-    /*cor de fundo*/
-main{
-    background-color: #210325;
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Macondo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-    /*SESÇÃO PRINCIPAL*/
+body{
+    font-family: 'Macondo', cursive;
+    background-color: #00001C;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Berkshire Swash', cursive;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    width: 22%;
+    font-size: 1.2rem;
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+button:hover{
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 1.1rem;
+}
+
+/*cor de fundo*/
+main{
+    background-color: #210325;
+    width: 28rem;
+}
+
+/*SESÇÃO PRINCIPAL*/
 .container-bemvindo{
-    background-image: url("../img/fundos/fundoIndex.jpg");
+    background-image: url("../../img/fundos/fundoIndex.jpg");
     background-repeat: no-repeat;
-    background-position: center ;
+    background-position:  center ;
     background-size: cover;
     background-attachment: scroll;
     color: white;
+    width: 28rem;
     height: 32rem;
     text-align: center;
 }
+.bemVindo{
+    margin: -5% 0rem 7% 1%;
 
-    /*SESÇÃO PRINCIPAL - SUBTITULO*/
+}
+
+.textoCapa{
+    text-align: center;
+    color: #fff;
+    background-color: #24365e;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 10px 10px rgba(59, 94, 250, 0.5);
+    width: 63vh;
+    height: 28vh;
+    position: absolute;
+    margin: 0% 23rem 13% 11%;
+
+}
+
+/*SESÇÃO PRINCIPAL - SUBTITULO*/
 .titulo-tx, .tx-malvado{
     font-size: 22px;
 }
 
-    /*TEXTO DA SESÇÃO PRINCIPAL*/
+/*TEXTO DA SESÇÃO PRINCIPAL*/
 .tx-pincipal{
     font-size: 18px;
 }
 
-    /*ESTILO DO TEXTO SOBRE OS PERSSONAGENS MALVADOS*/
+/*ESTILO DO TEXTO SOBRE OS PERSSONAGENS MALVADOS*/
 .tx-malvado{
     font-style: italic
 }
 
-    /*BOTÕES*/
-.bt-criarP{
+/*BOTÕES*/
+.bt-criarP, .bt-criarP2, .bt-criarP3{
     background-color:#BD53B9;
     color: aliceblue;
     border-radius: 0.3rem;
     border: none;
-    margin-left: auto;
-    margin-right: auto;
     display: block;
-    width: 20%;
-    height: 2.5rem;
-    font-size: 20px;
+    width: 33vh;
+    height: 7vh;
+    margin: 46% 7rem 20% 28%;
 }
 
-    /*CENTRALIZANDO OS TEXTOS DO MAGO, GUERREIRO E MALVADO*/
-.tx-mag, .tx-guerr, .tx-malvado{
+.bt-criarP2, .bt-criarP3{
+    background-color: #444;
+    margin: 10% 5rem 0% 28%;
+
+}
+
+/*CENTRALIZANDO OS TEXTOS DO MAGO, GUERREIRO E MALVADO*/
+.tx-mag, .tx-guerr{
     text-align: center;
+
 }
 
-    /*TITULO DO MAGO E DO GUERREIRO*/
+.tx-malvado{
+    text-align: justify;
+    margin: 1% 2rem 1% 5%;
+}
+
+/*TITULO DO MAGO E DO GUERREIRO*/
 .tituloMag, .tituloGuerr{
     font-size: 50px;
 
 }
 /* SECTIONs DE MAGO, GUERREIRO E MALVADO*/
 .container-mag, .container-guerreiro, .container-malvado{
-    background-color: #A64241;
-    color: aliceblue;
+    background-color: white;
+    color:black;
     border-radius: 2rem;
-    margin: 1rem;
-}
-    /*FUNDO DO GUERREIRO*/
-.container-guerreiro{
-    background-color: #3D2B2A;
+    width: 69vh;
+    margin: 1% 2rem 1% 4%;
+
 }
 
-    /*TEXTO DE DESCRIÇÃO DO MAGO E GUERREIRO*/
+.ladoMal{
+    color: #fff;
+    margin: 1.5rem;
+    font-size: 33px;
+    text-align: center;
+
+
+}
+/*PERSONAGENS MALVADOS*/
+.malvado{
+    margin-left: 13vh;
+}
+
+.malvadoGrr{
+
+    margin-left: 0vh;
+}
+
+.imgGuerr{
+
+    margin-right: -3vh;
+}
+
+/*TEXTO DE DESCRIÇÃO DO MAGO E GUERREIRO*/
 .descriMag, .descriGuerr{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 45%;
+    width: 73%;
+    text-align: justify;
+    font-size: 20px;
 }
 
-    /*MARGEM DA DESCRIÇÃO DO GUERREIRO*/
+/*MARGEM DA DESCRIÇÃO DO GUERREIRO*/
 .descriGuerr{
-    margin-left: 1rem ;
+    margin-left: -3vh ;
 }
 
-    /*IMAGEM E TEXTO UM DO LADO DO OUTRO, FEITICEIRA E GLADIADORA*/
+/*IMAGEM E TEXTO UM DO LADO DO OUTRO, FEITICEIRA E GLADIADORA*/
 .imgFeit, .descriMag, .imgGlad, .descriGuerr{
     display: inline-block;
+    text-justify: auto;
+
 }
 
-    /*TAMANHO DOS ICONES*/
+/*TAMANHO DOS ICONES*/
 .iconMag, .iconGuerr{
     height: 60px;
 }
 
-    /*COLOCANDO O ICONE DO LADO DO TITULO, MAGO E GUERREIRO*/
+/*COLOCANDO O ICONE DO LADO DO TITULO, MAGO E GUERREIRO*/
 .tituloMag, .iconMag, .tituloGuerr, .iconGuerr{
     display: inline-block;
+    margin: 1% 0rem 3% 2%;
+}
 
+@media screen and (min-width: 768px){
+
+    main{
+        width: 102%;
+    }
+
+    .container-bemvindo{
+        width: 102%;
+
+    }
+
+    .textoCapa{
+
+        width: 83vh;
+        height: 24vh;
+        margin: 5% 23rem 13% 31%;
+
+    }
+    .bt-criarP{
+        margin: 28% 5rem 5% 38%;
+
+    }
+
+    .bt-criarP2, .bt-criarP3{
+        margin: 21% 5rem 5% 38%;
+    }
+
+    .container-mag, .container-guerreiro, .container-malvado{
+        width: 125vh;
+        margin: 1% 2rem 1% 1%;
+
+    }
+    .malvado{
+        margin-left: 33px;
+    }
+
+    .iconGuerr{
+        margin-right: 10vh;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px){
+    main{
+        width: 100%;
+    }
+
+    .container-bemvindo{
+        width: 100%;
+
+    }
+
+    .textoCapa{
+
+        width: 96vh;
+        height: 24vh;
+        margin: 2% 23rem 13% 39%;
+
+    }
+
+    .bt-criarP{
+
+        margin: 16% 5rem 5% 42%;
+    }
+    .bt-criarP2{
+
+        margin: -23% 5rem 5% 42%;
+    }
+
+    .bt-criarP3{
+        margin: 8% 6rem 5% 42%;
+
+    }
+
+    .bemVindo{
+        line-height: 1.3;
+        margin: -2% -6rem -27% -1%;
+    }
+
+
+    .container-mag, .container-guerreiro, .container-malvado{
+        width: 98%;
+        margin: 1% 2rem 1% 1%;
+
+    }
+
+    .tituloMag, .iconMag, .tituloGuerr, .iconGuerr {
+
+        margin: 3% 0rem 4% 2%;
+    }
+
+    .descriMag, .descriGuerr{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 45%;
+    }
+    .imgFeit, .descriMag, .imgMag{
+        display: inline-block;
+        margin:4% -1rem 28% -17%;
+        width: 36%;
+    }
+
+    .imgFeit{
+        margin-right: 23vh;
+    }
+
+    .imgMag{
+        margin-left: 3vh;
+        margin-right: -25vh;
+    }
+
+    .imgGlad, .descriGuerr, .imgGuerr{
+        display: inline-block;
+        margin: 1% 5rem 23% 1%;
+        width: 34%;
+    }
+
+    .imgGuerr{
+        width: 79vh;
+        margin-right: -11vh;
+    }
+
+    .descriGuerr{
+        margin-left: -11vh;
+        margin-right: -13vh;
+    }
+
+    .imgGlad{
+        margin-left: -19vh;
+
+        margin-right: 7vh;
+    }
+
+    .tx-malvado, .titiloMalvado{
+        margin: 0% 4rem 0% 7%;
+        font-size: 6vh;
+    }
+
+    .malvado{
+        margin-left: 90px;
+        margin-right: 17vh;
+    }
+
+    .malvadoGuerr{
+        margin: 1% 5rem -2% 1%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+
+    main {
+        width: 90rem;
+    }
+    .container-bemvindo {
+        width: 90rem;
+    }
+
+    .titulo-tx, .texto{
+        font-size: 30px;
+    }
+
+    .textoCapa {
+        width: 129vh;
+        height: 33vh;
+        margin: 0% 26rem 14% 43%;
+    }
+
+    .bt-criarP {
+        margin: 15% 5rem 5% 44%;
+    }
+
+    .container-mag, .container-guerreiro, .container-malvado {
+        width: 88rem;
+
+    }
+
+    .iconMag, .iconGuerr {
+        height: 88px;
+    }
+
+    .tituloMag, .tituloGuerr {
+        font-size: 75px;
+    }
+
+    .tituloMag, .iconMag, .tituloGuerr, .iconGuerr {
+        margin: 3% 0rem 5% 2%;
+    }
+
+    .imgFeit, .descriMag, .imgMag {
+        display: inline-block;
+        margin: -9% -1rem 14% -2%;
+
+    }
+
+    .imgGlad, .descriGuerr, .imgGuerr {
+        display: inline-block;
+        margin: -13% 4rem 10% -8%;
+        width: 35%;
+    }
+
+    .imgGuerr {
+        width: 101vh;
+        margin-right: -9vh;
+    }
+    .bt-criarP2 {
+        margin: -17% 6rem 1% 44%;
+    }
+
+    .descriMag, .descriGuerr{
+        font-size: 24px;
+    }
+
+    .descriGuerr {
+        margin-left: -14vh;
+        margin-right: 3vh;
+    }
+
+    .malvado {
+        margin-left: 101px;
+        margin-right: 28vh;
+        width: 67vh;
+    }
+
+    .malvadoGuerr {
+        margin: 1% 5rem -4% -6%;
+        width: 102vh;
+    }
+
+}
+
+@media screen and (min-width: 1600px){
+
+    main {
+        width: 100rem;
+    }
+    .container-bemvindo {
+        width: 100rem;
+    }
+
+    .titulo-tx, .texto{
+        font-size: 30px;
+    }
+
+    .textoCapa {
+        width: 129vh;
+        height: 33vh;
+        margin: -1% 26rem 14% 47%;
+    }
+    .bemVindo {
+        line-height: 0.3;
+        margin: -2% -1rem -32% -2%;
+    }
+
+    .bt-criarP, .bt-criarP2, .bt-criarP3 {
+        width: 19rem;
+        height: 4rem;
+        font-size: 30px;
+    }
+    .bt-criarP{
+        margin: 13% 5rem 5% 44%;
+    }
+
+    .container-mag, .container-guerreiro, .container-malvado {
+        width: 98rem;
+
+    }
+
+    .iconMag, .iconGuerr {
+        height: 88px;
+    }
+
+    .tituloMag, .tituloGuerr {
+        font-size: 75px;
+    }
+
+    .tituloMag, .iconMag, .tituloGuerr, .iconGuerr {
+        margin: 3% 0rem 5% 2%;
+    }
+
+    .imgFeit, .descriMag, .imgMag {
+        display: inline-block;
+        margin: -9% -1rem 14% -2%;
+
+    }
+
+    .imgGlad, .descriGuerr, .imgGuerr {
+        display: inline-block;
+        margin: -13% 4rem 10% -7%;
+        width: 35%;
+    }
+
+    .imgGuerr {
+        width: 101vh;
+        margin-right: -9vh;
+    }
+    .bt-criarP2 {
+        margin: -17% 6rem 1% 44%;
+    }
+
+    .descriMag, .descriGuerr{
+        font-size: 26px;
+    }
+
+    .descriGuerr {
+        margin-left: -14vh;
+        margin-right: 3vh;
+    }
+
+    .malvado {
+        margin-left: 101px;
+        margin-right: 44vh;
+        width: 67vh;
+    }
+
+    .malvadoGuerr {
+        margin: 1% 5rem -4% -6%;
+        width: 102vh;
+    }
+
+    .tx-malvado, .titiloMalvado {
+        margin: 0% 4rem 0% 7%;
+        font-size: 8vh;
+    }
 }
