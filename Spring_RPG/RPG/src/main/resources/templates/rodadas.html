@@ -47,60 +47,57 @@
 <!--Conteúdo Principal -->
 <main>
     <section>
-        <div class="chamadaBatalha">
+        <div class="imgBatalha">
             <img class="imgRodada" src="/img/fundos/fundoRodadas.jpg">
-
             <div class="boss">
                 <h3 th:text="${bossAtual.nome}"></h3>
-                <img class="imgAvatar" th:src="${bossAtual.caminhoDaImg}" alt="Imagem do Personagem">
-                <img class="simboloAvatar" th:src="${bossAtual.caminhoDaImgSimbolo}" alt="Imagem do Símbolo">
+                <img th:class="'imgAvatar' + ${bossAtual.nome}" th:src="${bossAtual.caminhoDaImg}" alt="Imagem do Personagem">
             </div>
         </div>
 
-        <div th:if="${rodadaAtual == 1}">
+        <div class="jogadores">
             <h3 th:text="${bossAtual.nome}"></h3>
-            <span class="versus">VS</span>
+            <span>VS</span>
             <h3 th:text="${ultimoPersonagem.nome}"></h3>
+        </div>
 
+        <div class="rodada1" th:if="${rodadaAtual == 1}">
             <h4 th:text="'Rodada' + ${rodadaAtual}"></h4>
             <form action="/rodada" method="post">
                 <button type="submit" name="acaoJogador" value="atacar">Ataque</button>
                 <button type="submit" name="acaoJogador" value="defender">Defesa</button>
+                <p th:text="${mensagemRodada}"></p>
+                <button class="bVoltar" type="submit" name="acaoJogador" value="defender">Voltar</button>
             </form>
         </div>
 
-        <div th:if="${rodadaAtual == 2}">
-            <h3 th:text="${bossAtual.nome}"></h3>
-            <span class="versus">VS</span>
-            <h3 th:text="${ultimoPersonagem.nome}"></h3>
-
+        <div class="rodada2" th:if="${rodadaAtual == 2}">
             <h4 th:text="'Rodada' + ${rodadaAtual}"></h4>
-            <p th:text="${mensagemRodada}"></p>
             <form action="/rodada" method="post">
                 <button type="submit" name="acaoJogador" value="atacar">Ataque</button>
                 <button type="submit" name="acaoJogador" value="defender">Defesa</button>
+                <p th:text="${mensagemRodada}"></p>
+                <button class="bVoltar" type="submit" name="acaoJogador" value="defender">Voltar</button>
             </form>
         </div>
 
-        <div th:if="${rodadaAtual == 3}">
-            <h3 th:text="${bossAtual.nome}"></h3>
-            <span class="versus">VS</span>
-            <h3 th:text="${ultimoPersonagem.nome}"></h3>
-
+        <div class="rodada3" th:if="${rodadaAtual == 3}">
             <h4 th:text="'Rodada' + ${rodadaAtual}"></h4>
-            <p th:text="${mensagemRodada}"></p>
             <form action="/rodada" method="post">
                 <button type="submit" name="acaoJogador" value="atacar">Ataque</button>
                 <button type="submit" name="acaoJogador" value="defender">Defesa</button>
+                <p th:text="${mensagemRodada}"></p>
+                <button class="bVoltar" type="submit" name="acaoJogador" value="defender">Voltar</button>
             </form>
         </div>
 
-        <div th:if="${mensagemFimDeJogo}">
+        <div class="statusRodada" th:if="${mensagemFimDeJogo}">
             <h2 th:text="'Fim de Jogo '+ ${statusFimDeJogo}"></h2>
             <p th:text="${mensagemRodada}"></p>
             <p th:text="${mensagemFimDeJogo}"></p>
             <a href="rodada">
-                <button th:class="botao-continuar">Continuar</button>
+                <button th:class="bContinuar">Continuar</button>
+                <button class="bVoltar" type="submit" name="acaoJogador" value="defender">Voltar</button>
             </a>
         </div>
     </section>

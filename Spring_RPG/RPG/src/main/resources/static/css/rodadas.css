@@ -1,3 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Macondo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Macondo', cursive;
+    background-color: #382873;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Berkshire Swash', cursive;
+    color: #382873;
+}
+
+button {
+    width: 50%;
+    font-size: 1.2rem;
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    margin: 1rem;
+}
+
+button:hover{
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 1.1rem;
+}
+
+/* Propriedades para 320px */
+.imgBatalha{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
 .imgRodada{
-    height: 300px;
+    max-width: 100%;
+}
+
+.imgAvatarMinotauro{
+    position: absolute;
+    top: 2vh;
+    left: 18vh;
+    max-height: 15vh;
+}
+
+.imgAvatarCerbero{
+    position: absolute;
+    top: 6vh;
+    left: 19vh;
+    max-height: 11vh;
+}
+
+.imgAvatarElicius{
+    position: absolute;
+    top: 4vh;
+    left: 19vh;
+    max-height: 13vh;
+}
+
+.jogadores,
+.rodada1,
+.rodada2,
+.rodada3,
+.statusRodada{
+    background-color: aliceblue;
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.bVoltar{
+    background-color: #882b2b;
+}
+
+.bContinuar{
+    background-color: #468018;
+}
+
+@media screen and (min-width: 425px){
+    .imgAvatarMinotauro{
+        position: absolute;
+        top: 1vh;
+        left: 22vh;
+        max-height:21vh;
+    }
+
+    .imgAvatarCerbero{
+        position: absolute;
+        top: 6vh;
+        left: 24vh;
+        max-height: 15vh;
+    }
+
+    .imgAvatarElicius{
+        position: absolute;
+        top: 4vh;
+        left: 26vh;
+        max-height: 18vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .imgAvatarMinotauro{
+        top: 4vh;
+        left: 44vh;
+        max-height: 35vh;
+    }
+
+    .imgAvatarCerbero{
+        position: absolute;
+        top: 13vh;
+        left: 45vh;
+        max-height: 26vh;
+    }
+
+    .imgAvatarElicius{
+        position: absolute;
+        top: 6vh;
+        left: 45vh;
+        max-height: 34vh;
+    }
+    .jogadores,
+    .rodada1,
+    .rodada2,
+    .rodada3,
+    .statusRodada{
+        margin: 10px 50px;
+    }
+
+    .jogadores{
+        display:flex;
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    span{
+        margin: 0 10px;
+    }
+
+    p{
+        margin: 15px 0;
+        font-size: 20px;
+    }
+
+    button{
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+
+    h4{
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .imgAvatarMinotauro{
+        top: 5vh;
+        left: 56vh;
+        max-height: 48vh;
+    }
+
+    .imgAvatarCerbero{
+        position: absolute;
+        top: 18vh;
+        left: 62vh;
+        max-height: 34vh;
+    }
+
+    .imgAvatarElicius{
+        position: absolute;
+        top: 8vh;
+        left: 61vh;
+        max-height: 48vh;
+    }
+    span{
+        margin: 0 20px;
+    }
+
+    p{
+        margin: 20px 0;
+        font-size: 22px;
+    }
+
+    button{
+        font-size: 1.5rem;
+    }
+
+    h4{
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .imgAvatarMinotauro{
+        top: 6vh;
+        left: 80vh;
+        max-height: 68vh;
+    }
+
+    .imgAvatarCerbero{
+        position: absolute;
+        top: 10vh;
+        left: 81vh;
+        max-height: 62vh;
+    }
+
+    .imgAvatarElicius{
+        position: absolute;
+        top: 3vh;
+        left: 78vh;
+        max-height: 74vh;
+    }
+
+    .jogadores,
+    .rodada1,
+    .rodada2,
+    .rodada3,
+    .statusRodada{
+        margin: 10px 70px;
+    }
+
+    span{
+        margin: 0 25px;
+    }
+
+    p{
+        margin: 25px 0;
+        font-size: 24px;
+    }
+
+    button{
+        font-size: 1.8rem;
+    }
+
+    h4{
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .imgAvatarMinotauro{
+        top: 7vh;
+        left: 90vh;
+        max-height: 80vh;
+    }
+
+    .imgAvatarCerbero{
+        position: absolute;
+        top: 14vh;
+        left: 92vh;
+        max-height: 66vh;
+    }
+
+    .imgAvatarElicius{
+        position: absolute;
+        top: 4vh;
+        left: 92vh;
+        max-height: 83vh;
+    }
+
+    .jogadores,
+    .rodada1,
+    .rodada2,
+    .rodada3,
+    .statusRodada{
+        margin: 10px 80px;
+    }
+
+    span{
+        margin: 0 25px;
+    }
+
+    p{
+        margin: 25px 0;
+        font-size: 26px;
+    }
+
+    button{
+        font-size: 2rem;
+    }
+
+    h4{
+        font-size: 30px;
+    }
 }
