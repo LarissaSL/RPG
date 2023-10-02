@@ -264,6 +264,28 @@ img {
 
 }
 
+@media screen and (min-width: 1300px) {
+
+    .container{
+        height: 70vh;
+        width: 120vh;
+        margin: 2rem 15rem;
+    }
+
+
+    .img-icon {
+        width: 40vh;
+        top: 13rem;
+        left: 19rem;
+    }
+
+    /* Mago Malvado */
+    .img-cadastro-35{
+        margin-top: 1rem;
+    }
+
+}
+
 @media screen and (min-width: 1440px) {
 
     .container{

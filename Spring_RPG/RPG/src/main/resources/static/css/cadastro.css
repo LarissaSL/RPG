@@ -273,6 +273,30 @@ body{
 
 }
 
+@media screen and (min-width: 1300px){
+
+    .fundo {
+        width: 195vh;
+        height: 90vh;
+        top: 50%;
+    }
+
+    .container-textos {
+        width: 75%;
+        margin: 7rem auto;
+    }
+
+    .container-2{
+        margin: 7rem 3rem 5rem 14rem;
+    }
+
+
+    .continuar{
+        margin-left: 15rem;
+    }
+
+}
+
 @media screen and (min-width: 1440px){
 
     .fundo {

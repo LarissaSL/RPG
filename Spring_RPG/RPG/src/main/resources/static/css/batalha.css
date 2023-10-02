@@ -267,6 +267,7 @@ button:hover{
     }
 }
 
+
 @media screen and (min-width: 768px) {
 
     .container-1 {
@@ -400,6 +401,85 @@ button:hover{
         margin-top: 1rem;
     }
 }
+
+@media screen and (min-width: 1300px) {
+
+    .container-1 {
+        height: auto;
+    }
+
+
+    .fundoBatalha {
+        max-width: 100%;
+        width: 195vh;
+        height: 60vh;
+    }
+
+    .texto-apresentacao {
+        margin: 14.5rem 25rem;
+    }
+
+    .container-2 {
+        margin: 9rem 5.5rem;
+    }
+
+
+    .Minotauro, .Cerbero, .Elicius{
+        height: 87vh;
+        width: 90%;
+        display: flex;
+        align-items: flex-start;
+        padding: 2rem;
+    }
+
+
+    .img-icon-Minotauro{
+        margin: 6rem 2rem;
+    }
+
+    .imagem-Minotauro, .imagem-Cerbero, .imagem-Elicius {
+        position: relative;
+        float: left;
+    }
+
+    .img-inimigo-Minotauro{
+        width: 50vh;
+        margin: 3rem 0rem;
+    }
+
+    .img-icon-Cerbero, .img-icon-Elicius{
+        margin: 8rem 2rem;
+    }
+
+    .img-inimigo-Cerbero,
+    .img-inimigo-Elicius {
+        width: 60vh;
+        margin: 6rem 0rem;
+    }
+
+    .nome-boss,
+    .dificuldade-boss-Facil,
+    .dificuldade-boss-Medio,
+    .dificuldade-boss-Dificil,
+    .botao-batalhar
+    {
+        margin-top: 2rem;
+        margin-left: 3rem;
+    }
+
+
+    .texto-inimigo{
+        float: left;
+        display: block;
+        margin-left: 2rem;
+        text-align: left;
+    }
+
+    .botao-batalhar{
+        margin-top: 1rem;
+    }
+}
+
 
 @media screen and (min-width: 1440px) {
 
