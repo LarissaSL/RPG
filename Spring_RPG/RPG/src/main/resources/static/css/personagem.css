@@ -336,4 +336,8 @@ img {
     .img-cadastro-45{
         margin-top: 5.5rem;
     }
+
+    button{
+        width: 90%;
+    }
 }

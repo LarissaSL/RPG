@@ -380,7 +380,7 @@ a {
     .bVoltar:hover{
         background-color: #882b2b;
         box-shadow: inset -4px 4px 0 #222;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
 }
