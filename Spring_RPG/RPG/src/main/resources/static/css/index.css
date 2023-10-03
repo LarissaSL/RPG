@@ -10,6 +10,13 @@ body{
     background-color: #00001C;
 }
 
+.rodape {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: aliceblue;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: 'Berkshire Swash', cursive;
 }
@@ -52,7 +59,6 @@ main{
 }
 .bemVindo{
     margin: -5% 0rem 7% 1%;
-
 }
 
 .textoCapa{
@@ -98,13 +104,11 @@ main{
 .bt-criarP2, .bt-criarP3{
     background-color: #444;
     margin: 10% 5rem 0% 28%;
-
 }
 
 /*CENTRALIZANDO OS TEXTOS DO MAGO, GUERREIRO E MALVADO*/
 .tx-mag, .tx-guerr{
     text-align: center;
-
 }
 
 .tx-malvado{
@@ -115,7 +119,6 @@ main{
 /*TITULO DO MAGO E DO GUERREIRO*/
 .tituloMag, .tituloGuerr{
     font-size: 50px;
-
 }
 /* SECTIONs DE MAGO, GUERREIRO E MALVADO*/
 .container-mag, .container-guerreiro, .container-malvado{
@@ -124,7 +127,6 @@ main{
     border-radius: 2rem;
     width: 69vh;
     margin: 1% 2rem 1% 4%;
-
 }
 
 .ladoMal{
@@ -132,21 +134,18 @@ main{
     margin: 1.5rem;
     font-size: 33px;
     text-align: center;
-
-
 }
+
 /*PERSONAGENS MALVADOS*/
 .malvado{
     margin-left: 13vh;
 }
 
 .malvadoGrr{
-
     margin-left: 0vh;
 }
 
 .imgGuerr{
-
     margin-right: -3vh;
 }
 
@@ -169,7 +168,6 @@ main{
 .imgFeit, .descriMag, .imgGlad, .descriGuerr{
     display: inline-block;
     text-justify: auto;
-
 }
 
 /*TAMANHO DOS ICONES*/
@@ -222,7 +220,6 @@ main{
     .iconGuerr{
         margin-right: 10vh;
     }
-
 
 }
 
