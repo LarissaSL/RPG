@@ -10,6 +10,22 @@ body{
     background-color: #382873;
 }
 
+.rodape {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: aliceblue;
+}
+
+.itens-grupo{
+    margin-top: 2rem;
+}
+
+.links, a{
+    text-decoration: none;
+    align-items: center;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: 'Berkshire Swash', cursive;
     color: #382873;
@@ -129,6 +145,17 @@ a {
         left: 45vh;
         max-height: 34vh;
     }
+
+    .copyright{
+        margin: 5px 0;
+    }
+
+    .links, a{
+        font-size: 1rem;
+        text-decoration: none;
+        align-items: center;
+    }
+
     .jogadores,
     .rodada1,
     .rodada2,

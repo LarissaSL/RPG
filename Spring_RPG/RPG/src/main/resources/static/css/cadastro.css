@@ -74,12 +74,10 @@ body{
     z-index: 1;
 }
 
-
 .container-2{
     margin: 25rem 2rem 5rem 2rem;
     padding: 0rem;
 }
-
 
 .titulo{
     text-align: center;
@@ -90,14 +88,11 @@ body{
     text-align: justify;
 }
 
-
-
 .personagem,
 .personalidade{
     color: #fff;
     margin-top: 2rem;
 }
-
 
 .voltar,
 .continuar {
@@ -132,7 +127,6 @@ body{
         margin: 18rem 2rem 5rem 2rem;
         padding: 0rem;
     }
-
 
     .voltar,
     .continuar {
@@ -225,7 +219,6 @@ body{
         margin: 17rem 2rem 5rem 4.5rem;
         padding: 0rem;
     }
-
 
     .voltar,
     .continuar {
