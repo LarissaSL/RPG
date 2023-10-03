@@ -83,6 +83,10 @@ public class Rodadas {
     }
 
     public String realizarRodada(String acaoPersonagem) {
+        if ("desistir".equals(acaoPersonagem)){
+            return "index";
+        }
+
         Random rand = new Random();
         int acaoBoss = rand.nextInt(2);
         String acaoBossEscolhida;

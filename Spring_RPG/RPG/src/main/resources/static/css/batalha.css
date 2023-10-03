@@ -568,7 +568,7 @@ button:hover{
 
     .texto-apresentacao {
         height: 60vh;
-        margin: 22rem 50vh;
+        margin: 22rem 60vh;
     }
 
     .texto-apresentacao .titulo{
@@ -588,10 +588,15 @@ button:hover{
         margin-top: 12rem;
     }
 
+    .container-2 .inimigos{
+        margin-left: 5rem;
+    }
+
 
     .Minotauro, .Cerbero, .Elicius{
         height: 90vh;
         padding: 2rem;
+        margin-left: 5rem;
     }
 
 

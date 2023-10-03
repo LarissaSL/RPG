@@ -18,6 +18,11 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+
 button {
     width: 22%;
     font-size: 1.2rem;
@@ -508,4 +513,165 @@ main{
         margin: 0% 4rem 0% 7%;
         font-size: 8vh;
     }
+}
+
+@media screen and (min-width: 1800px){
+
+    main {
+        width: 100%;
+    }
+    .container-bemvindo {
+        width: 100%;
+    }
+
+
+    .texto{
+        font-size: 1.5rem;
+        max-width: 50vh;
+        text-align: justify;
+        margin: 1rem 6rem;
+    }
+
+    .textoCapa {
+        width: 70vh;
+        height: 30vh;
+        margin: -1% 20rem 14% 58%;
+    }
+
+    .titulo-tx{
+        font-family: 'Berkshire Swash', cursive;
+        padding: 1rem;
+    }
+
+    .bt-criarP{
+        margin: 13% 5rem 5% 68%;
+        font-size: 1.3rem;
+        background-color: #BD53B9;
+    }
+
+
+    .bt-criarP:hover{
+        box-shadow: inset -4px 4px 0 #222;
+        font-size: 1.1rem;
+    }
+
+    .container-mag, .container-guerreiro, .container-malvado {
+        width: 98rem;
+        margin-left: 8rem;
+
+    }
+
+    .tituloMag, .tituloGuerr {
+        font-size: 75px;
+        font-family: 'Berkshire Swash', cursive;
+    }
+
+
+    .bt-criarP2, .bt-criarP3 {
+        width: 19rem;
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .bt-criarP2:hover,
+    .bt-criarP3:hover{
+        box-shadow: inset -4px 4px 0 #222;
+        font-size: 1.3rem;
+    }
+
+
+    .iconMag, .iconGuerr {
+        height: 88px;
+    }
+
+
+
+    .tituloMag, .iconMag, .tituloGuerr, .iconGuerr {
+        margin: 3% 0rem 5% 2%;
+    }
+
+    .descriMag {
+        display: inline-block;
+        margin: -9% 0rem 14% 1rem;
+
+    }
+
+    .imgFeit,
+    .imgMag{
+        width: 30%;
+    }
+
+    .imgFeit{
+        margin-left: -3rem;
+    }
+
+    .imgMag{
+        margin-left: 1rem;
+    }
+
+
+    .imgGlad{
+        width: 27%;
+        margin-left: -7rem;
+        margin-right: 0rem;
+    }
+
+    .imgGuerr{
+        width: 60vh;
+    }
+
+
+    .descriGuerr {
+        width: 35%;
+        margin: 0rem 4.5rem;
+    }
+
+    .bt-criarP2 {
+        margin: -17% 6rem 1% 44%;
+    }
+
+    .descriMag, .descriGuerr{
+        font-size: 26px;
+    }
+
+    .tx-malvado, .titiloMalvado {
+        margin: 5% 4rem 0% 7%;
+        font-size: 6vh;
+        max-width: 85%;
+        font-family: 'Berkshire Swash', cursive;
+    }
+
+    .container-malvados{
+        margin-left: 10px;
+    }
+
+    .malvado,
+    .malvadoGuerr {
+        display: inline-block;
+        width: 25vh;
+        margin: 4rem;
+    }
+
+    .malvadoGuerr {
+        width: 35vh;
+        margin: 4rem 0rem;
+    }
+
+    .malvado:hover,
+    .malvadoGuerr:hover{
+        transform: scale(1.1);
+        transition: transform 0.3s;
+    }
+
+    .bt-criarP3{
+        margin-top: .9rem;
+        font-size: 1.4rem;
+    }
+
+    .container-malvado{
+        height: auto;
+    }
+
+
+
 }

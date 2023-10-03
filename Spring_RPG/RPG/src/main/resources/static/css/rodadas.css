@@ -30,6 +30,10 @@ button:hover{
     font-size: 1.1rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Propriedades para 320px */
 .imgBatalha{
     position: relative;
@@ -288,4 +292,68 @@ button:hover{
     h4{
         font-size: 30px;
     }
+}
+
+@media screen and (min-width: 1800px) {
+    .imgBatalha{
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
+        bottom: 7rem;
+        z-index: -1;
+    }
+
+    .imgAvatarMinotauro{
+        top: 11rem;
+        left: 76vh;
+        max-height: 40vh;
+    }
+
+    .imgAvatarCerbero{
+        top: 16vh;
+        left: 69vh;
+        max-height: 43vh;
+    }
+
+    .imgAvatarElicius{
+        position: absolute;
+        top: 17vh;
+        left: 75vh;
+        max-height: 45vh;
+    }
+
+    .rodada1,
+    .rodada2,
+    .rodada3,
+    .statusRodada{
+        margin: 2rem 80px;
+    }
+
+    .jogadores{
+        margin-top: -18rem;
+    }
+
+
+    button {
+        width: 10rem;
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+
+    .bVoltar{
+        width: 10%;
+        font-size: 1.1rem;
+    }
+
+    button:hover{
+        background-color: #468018;
+        box-shadow: inset -4px 4px 0 #222;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .bVoltar:hover{
+        background-color: #882b2b;
+        box-shadow: inset -4px 4px 0 #222;
+        font-size: 1rem;
+    }
+
 }

@@ -124,6 +124,10 @@ public class HomeController {
             rodadas = new Rodadas(personagemRepository, bossService);
         }
 
+        if (acaoJogador.equals("desistir")){
+            return rodadas.realizarRodada(acaoJogador);
+        }
+
         model.addAttribute("rodadaAtual", rodadas.getRodadaAtual());
         //Garantir que só realize uma rodada quando houver a seleção de ação , ou seja, depois da 1 rodada
         if (rodadas.getRodadaAtual() > 1){
