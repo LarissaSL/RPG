@@ -31,7 +31,7 @@ button {
     border: 2px solid #000;
     color: #fff;
     background-color: #444;
-    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #350044;
 }
 
 button:hover{
@@ -39,7 +39,7 @@ button:hover{
     font-size: 1.1rem;
 }
 
-/*cor de fundo*/
+/*fundo*/
 main{
     background-color: #210325;
     width: 28rem;
@@ -57,10 +57,12 @@ main{
     height: 32rem;
     text-align: center;
 }
+/*TITULO DA SECTION PRINCIPAL <CAPA>*/
 .bemVindo{
     margin: -5% 0rem 7% 1%;
 }
 
+/*CAIXA DE TEXTO DA SECTION PRINCIPAL*/
 .textoCapa{
     text-align: center;
     color: #fff;
@@ -73,13 +75,16 @@ main{
     margin: 0% 23rem 13% 11%;
 
 }
-
-/*SESÇÃO PRINCIPAL - SUBTITULO*/
+/*tirando o risco dos link*/
+a{
+    text-decoration: none;
+}
+/*SESÇÃO PRINCIPAL - SUBTITULO, TAMANHO DA FONTE*/
 .titulo-tx, .tx-malvado{
     font-size: 22px;
 }
 
-/*TEXTO DA SESÇÃO PRINCIPAL*/
+/*TAMANHO DA FONTE DO TEXTO DA SESÇÃO PRINCIPAL*/
 .tx-pincipal{
     font-size: 18px;
 }
@@ -91,7 +96,6 @@ main{
 
 /*BOTÕES*/
 .bt-criarP, .bt-criarP2, .bt-criarP3{
-    background-color:#BD53B9;
     color: aliceblue;
     border-radius: 0.3rem;
     border: none;
@@ -100,9 +104,8 @@ main{
     height: 7vh;
     margin: 46% 7rem 20% 28%;
 }
-
+/*BOTÕES DO MAGO, GLADIADOR MAIS BT-3 MALVADO*/
 .bt-criarP2, .bt-criarP3{
-    background-color: #444;
     margin: 10% 5rem 0% 28%;
 }
 
@@ -111,6 +114,7 @@ main{
     text-align: center;
 }
 
+/*TEXTO DA ULTIMA SECTION - MALVADOS*/
 .tx-malvado{
     text-align: justify;
     margin: 1% 2rem 1% 5%;
@@ -129,6 +133,7 @@ main{
     margin: 1% 2rem 1% 4%;
 }
 
+/*TEXTO ENTRE AS SECTIONs GUERREIRO E MALVADOS*/
 .ladoMal{
     color: #fff;
     margin: 1.5rem;
@@ -140,11 +145,9 @@ main{
 .malvado{
     margin-left: 13vh;
 }
-
 .malvadoGrr{
     margin-left: 0vh;
 }
-
 .imgGuerr{
     margin-right: -3vh;
 }
@@ -181,326 +184,391 @@ main{
     margin: 1% 0rem 3% 2%;
 }
 
+/*RESPONSIVO PARA TELA 768*/
 @media screen and (min-width: 768px){
-
+    /*FUNDO*/
     main{
         width: 102%;
     }
 
+    /*SECTION PRINCIPAL IMG*/
     .container-bemvindo{
         width: 102%;
 
     }
 
+    /*CAIXA DE TEXTO DA SECTION PRICIPAL*/
     .textoCapa{
-
         width: 83vh;
         height: 24vh;
         margin: 5% 23rem 13% 31%;
 
     }
+
+    /*BOTÃO DA SECTION PRINCIPAL*/
     .bt-criarP{
         margin: 28% 5rem 5% 38%;
 
     }
 
+    /*BOTÃO MAGO E GLADIADOR E BT-3 MALVADOS*/
     .bt-criarP2, .bt-criarP3{
         margin: 21% 5rem 5% 38%;
     }
 
+    /*CAIXA DAS SECTIONs*/
     .container-mag, .container-guerreiro, .container-malvado{
         width: 125vh;
         margin: 1% 2rem 1% 1%;
 
     }
+    /*PERSONAGENS MALVADOS*/
     .malvado{
         margin-left: 33px;
     }
 
+    /*ICONE GUERREIRO*/
     .iconGuerr{
         margin-right: 10vh;
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2b438190690b168c6e2cf220cc5066e59891b0ad
 }
 
+/*RESPONSIVO PARA TELA 1024*/
 @media screen and (min-width: 1024px){
+    /*FUNDO*/
     main{
         width: 100%;
     }
 
+    /*SECTION PRINCIPAL IMG*/
     .container-bemvindo{
         width: 100%;
 
     }
 
+    /*CAIXA DE TEXTO DA SECTION PRICIPAL*/
     .textoCapa{
-
         width: 96vh;
         height: 24vh;
         margin: 2% 23rem 13% 39%;
-
     }
 
+    /*BOTÃO DA SECTION PRINCIPAL*/
     .bt-criarP{
-
         margin: 16% 5rem 5% 42%;
     }
-    .bt-criarP2{
 
+    /*BOTÃO MAGO E GLADIADOR*/
+    .bt-criarP2{
         margin: -23% 5rem 5% 42%;
     }
 
+    /*BOTÃO DA SECTION DOS MALVADOS*/
     .bt-criarP3{
         margin: 8% 6rem 5% 42%;
 
     }
 
+    /*TITULO DA SECTION PRINCIPAL <CAPA>*/
     .bemVindo{
         line-height: 1.3;
         margin: -2% -6rem -27% -1%;
     }
 
-
+    /*CAIXA DAS SECTIONs*/
     .container-mag, .container-guerreiro, .container-malvado{
         width: 98%;
         margin: 1% 2rem 1% 1%;
 
     }
 
+    /*TITULOS E ICONES*/
     .tituloMag, .iconMag, .tituloGuerr, .iconGuerr {
-
         margin: 3% 0rem 4% 2%;
     }
 
+    /*DESCRIÇÃO DE MAGO E GUERREIRO*/
     .descriMag, .descriGuerr{
         margin-left: auto;
         margin-right: auto;
         display: block;
         width: 45%;
     }
+    /*DESCRIÇÃO MAGO E IMGs - FEITICEIRA E MAGO*/
     .imgFeit, .descriMag, .imgMag{
         display: inline-block;
         margin:4% -1rem 28% -17%;
         width: 36%;
     }
 
+    /*FEITICERIA*/
     .imgFeit{
         margin-right: 23vh;
     }
-
+    /*MAGO*/
     .imgMag{
         margin-left: 3vh;
         margin-right: -25vh;
     }
 
+    /*DESCRIÇÃO GUERREIRO E IMGs - GLADIADORA E GUERREIRO*/
     .imgGlad, .descriGuerr, .imgGuerr{
         display: inline-block;
         margin: 1% 5rem 23% 1%;
         width: 34%;
     }
 
+    /*GUERREIRO*/
     .imgGuerr{
         width: 79vh;
         margin-right: -11vh;
     }
 
+    /*DESCRIÇÃO GUERREIRO*/
     .descriGuerr{
         margin-left: -11vh;
         margin-right: -13vh;
     }
 
+    /*GLADIADORA*/
     .imgGlad{
         margin-left: -19vh;
-
         margin-right: 7vh;
     }
 
+    /*SECTION MALVADO*/
     .tx-malvado, .titiloMalvado{
         margin: 0% 4rem 0% 7%;
         font-size: 6vh;
     }
 
+    /*PERSONAGENS MALVADO*/
     .malvado{
-        margin-left: 90px;
-        margin-right: 17vh;
+        margin-left: 138px;
+        margin-right: 29vh;
     }
 
+    /*GUERREIRO MALVADO*/
     .malvadoGuerr{
-        margin: 1% 5rem -2% 1%;
+        margin: 1% 5rem -2%  3%;
     }
 }
 
+/*RESPONSIVO PARA TELA 1440*/
 @media screen and (min-width: 1440px){
-
+    /*FUNDO*/
     main {
         width: 90rem;
     }
+    /*SECTION PRINCIPAL IMG*/
     .container-bemvindo {
         width: 90rem;
     }
 
+    /*TAMANHO DO FONTE DA CAIXA DE TEXTO DA SECTION PRICIPAL */
     .titulo-tx, .texto{
         font-size: 30px;
     }
 
+    /*CAIXA DE TEXTO DA SECTION PRICIPAL*/
     .textoCapa {
         width: 129vh;
         height: 33vh;
         margin: 0% 26rem 14% 43%;
     }
 
+    /*BOTÃO DA SECTION PRINCIPAL*/
     .bt-criarP {
         margin: 15% 5rem 5% 44%;
     }
 
+    /*CAIXA DAS SECTIONs*/
     .container-mag, .container-guerreiro, .container-malvado {
         width: 88rem;
 
     }
 
+    /*TAMANHO DOS ICONES - MAGO E GUERREIRO*/
     .iconMag, .iconGuerr {
         height: 88px;
     }
 
+    /*TAMANHO DOS TITULOS- MAGO E GUERREIRO*/
     .tituloMag, .tituloGuerr {
         font-size: 75px;
     }
 
+    /*POSIÇÃO DOS ICONES E TITULOS*/
     .tituloMag, .iconMag, .tituloGuerr, .iconGuerr {
         margin: 3% 0rem 5% 2%;
     }
 
+    /*DESCRIÇÃO MAGO E IMGs - FEITICEIRA E MAGO*/
     .imgFeit, .descriMag, .imgMag {
         display: inline-block;
         margin: -9% -1rem 14% -2%;
 
     }
 
+    /*DESCRIÇÃO GUERREITO E IMGs - GLADIADORA E GUERREIRO*/
     .imgGlad, .descriGuerr, .imgGuerr {
         display: inline-block;
         margin: -13% 4rem 10% -8%;
         width: 35%;
     }
 
+    /*GUERREIRO*/
     .imgGuerr {
         width: 101vh;
         margin-right: -9vh;
     }
+
+    /*BOTÃO MAGO E GLADIADOR*/
     .bt-criarP2 {
         margin: -17% 6rem 1% 44%;
     }
 
+    /*TAMANHO DA FONTE - DESCRIÇÃO DE MAGO E GUERREIRO*/
     .descriMag, .descriGuerr{
         font-size: 24px;
     }
-
+    /*DESCRIÇÃO GUERREIRO*/
     .descriGuerr {
         margin-left: -14vh;
         margin-right: 3vh;
     }
 
+    /*PERSONAGENS MALVADOS*/
     .malvado {
         margin-left: 101px;
         margin-right: 28vh;
         width: 67vh;
     }
 
+    /*GUERREITO MALVADO*/
     .malvadoGuerr {
         margin: 1% 5rem -4% -6%;
         width: 102vh;
     }
-
 }
 
+/*RESPONSIVO PARA TELA 1600p*/
 @media screen and (min-width: 1600px){
-
+    /*FUNDO*/
     main {
         width: 100rem;
     }
+
+    /*SECTION PRINCIPAL IMG*/
     .container-bemvindo {
         width: 100rem;
     }
 
+    /*TAMANHO DO FONTE DA CAIXA DE TEXTO DA SECTION PRICIPAL */
     .titulo-tx, .texto{
         font-size: 30px;
     }
 
+    /*CAIXA DE TEXTO DA SECTION PRICIPAL*/
     .textoCapa {
         width: 129vh;
         height: 33vh;
         margin: -1% 26rem 14% 47%;
     }
+
+    /*TITULO DA SECTION PRINCIPAL <CAPA>*/
     .bemVindo {
         line-height: 0.3;
         margin: -2% -1rem -32% -2%;
     }
-
+    /*BOTÃO CAPA, MAGO E GLADIADOR E BT-3 MALVADOS*/
     .bt-criarP, .bt-criarP2, .bt-criarP3 {
         width: 19rem;
         height: 4rem;
         font-size: 30px;
     }
+
+    /*BOTÃO DA SECTION PRINCIPAL*/
     .bt-criarP{
         margin: 13% 5rem 5% 44%;
     }
 
+    /*CAIXA DAS SECTIONs*/
     .container-mag, .container-guerreiro, .container-malvado {
         width: 98rem;
 
     }
 
+    /*ICONE MAGO E GUERREIRO*/
     .iconMag, .iconGuerr {
         height: 88px;
     }
 
+    /*TAMANHO DE FONTE DOS TITULOS - MAGO GUERREURO*/
     .tituloMag, .tituloGuerr {
         font-size: 75px;
     }
 
+    /*TITULOS E ICONES*/
     .tituloMag, .iconMag, .tituloGuerr, .iconGuerr {
         margin: 3% 0rem 5% 2%;
     }
 
+
+    /*DESCRIÇÃO MAGO E IMGs - FEITICEIRA E MAGO*/
     .imgFeit, .descriMag, .imgMag {
         display: inline-block;
         margin: -9% -1rem 14% -2%;
 
     }
 
+    /*DESCRIÇÃO GUERREITO E IMGs - GLADIADORA E GUERREIRO*/
     .imgGlad, .descriGuerr, .imgGuerr {
         display: inline-block;
         margin: -13% 4rem 10% -7%;
         width: 35%;
     }
 
+    /*GUERREIRO*/
     .imgGuerr {
         width: 101vh;
         margin-right: -9vh;
     }
+
+    /*BOTÃO MAGO E GLADIADOR */
     .bt-criarP2 {
         margin: -17% 6rem 1% 44%;
     }
 
+    /*DESCRIÇÃO DE MAGO E GUERREIRO*/
     .descriMag, .descriGuerr{
         font-size: 26px;
     }
 
+    /*POSIÇÃO DA DESCRIÇÃO DO GUERREIRO*/
     .descriGuerr {
         margin-left: -14vh;
         margin-right: 3vh;
     }
 
+    /*PERSONAGENS MALVADOS*/
     .malvado {
         margin-left: 101px;
         margin-right: 44vh;
         width: 67vh;
     }
 
+    /*GUERREIRO MALVADO*/
     .malvadoGuerr {
         margin: 1% 5rem -4% -6%;
         width: 102vh;
     }
 
+    /*TEXTO DO LADO OCULTO DA FORÇA*/
     .tx-malvado, .titiloMalvado {
         margin: 0% 4rem 0% 7%;
         font-size: 8vh;
