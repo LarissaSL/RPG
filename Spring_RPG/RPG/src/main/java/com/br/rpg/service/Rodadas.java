@@ -14,7 +14,6 @@ public class Rodadas {
     private int pontoPersonagem;
     private int pontoBoss;
     private int rodadaAtual;
-
     private String statusFimDaRodada;
     private int indiceDoBoss;
     private boolean atualizarBoss;
@@ -120,12 +119,11 @@ public class Rodadas {
 
     }
 
-    //Resetar os pontos do Boss e Personagem caso a rodadaAtual seja > 4
     public boolean rodadaConcluida() {
         return this.rodadaAtual > 4;
     }
 
-
+    // Status do final da Batalha e configurações para próxima
     public String mensagemFimDaBatalha() {
         String mensagem;
 

@@ -53,7 +53,6 @@ public class BossRepository {
     }
 
     public List<Boss> listarTodos() {
-
         return bossList;
     }
 

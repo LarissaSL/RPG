@@ -6,7 +6,7 @@ public class MagoHeroico extends Mago{
 
     public MagoHeroico(String nome) {
         super(nome, 100, 30, 30, "Heroico");
-        this.caminhoDaImg = "/img/personagens/magoHeroico.png";
-        this.caminhoDaImgSimbolo = "/img/personagens/magoSimbolo.png";
+        setCaminhoDaImg("/img/personagens/magoHeroico.png");
+        setCaminhoDaImgSimbolo("/img/personagens/magoSimbolo.png");
     }
 }

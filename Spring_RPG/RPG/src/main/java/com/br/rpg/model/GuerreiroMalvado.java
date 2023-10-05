@@ -6,8 +6,8 @@ public class GuerreiroMalvado extends Guerreiro{
 
     public GuerreiroMalvado(String nome) {
         super(nome, 100, 40, 20, "Malvado");
-        this.caminhoDaImg = "/img/personagens/guerreiroMalvado.png";
-        this.caminhoDaImgSimbolo = "/img/personagens/guerreiroSimbolo.png";
+        setCaminhoDaImg("/img/personagens/guerreiroMalvado.png");
+        setCaminhoDaImgSimbolo("/img/personagens/guerreiroSimbolo.png");
     }
 
 }

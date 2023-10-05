@@ -2,7 +2,6 @@ package com.br.rpg.service;
 
 import com.br.rpg.model.*;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 @Component("fabricaMalvado")
 public class FabricaPersonagemMalvado implements FabricaPersonagem {

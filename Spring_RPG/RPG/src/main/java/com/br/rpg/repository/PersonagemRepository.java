@@ -16,7 +16,7 @@ public class PersonagemRepository {
 
     private String nextNome = "nome";
 
-    //Construtor pra ter uma Feiticeira e poder trabalhar melhor no codigo sem precisar Cadastrar um Personagem
+    //Feiticeira Bot
     public PersonagemRepository() {
         FabricaPersonagemHeroico fabricaHeroico = new FabricaPersonagemHeroico();
         Personagem feiticeiroHeroico = fabricaHeroico.criarFeiticeira("Feiticeira Bot");
@@ -46,7 +46,7 @@ public class PersonagemRepository {
     public Personagem salvar(Personagem personagem) {
         if (personagem.getNome() == null || !existePersonagemComNome(personagem.getNome())) {
             /* Se o nome for nulo ou não existir um personagem com o mesmo nome, adiciona na lista, se tiver mesmo nome
-            Não acontece nada*/
+            ele informa no console e não realiza nada*/
             if (personagem.getNome() == null) {
                 personagem.setNome(nextNome);
             }

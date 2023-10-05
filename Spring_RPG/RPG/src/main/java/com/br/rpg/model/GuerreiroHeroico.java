@@ -6,7 +6,7 @@ public class GuerreiroHeroico extends Guerreiro{
 
     public GuerreiroHeroico(String nome) {
         super(nome, 100, 45, 30, "Heroico");
-        this.caminhoDaImg = "/img/personagens/guerreiroHeroico.png";
-        this.caminhoDaImgSimbolo = "/img/personagens/guerreiroSimbolo.png";
+        setCaminhoDaImg("/img/personagens/guerreiroHeroico.png");
+        setCaminhoDaImgSimbolo("/img/personagens/guerreiroSimbolo.png");
     }
 }
