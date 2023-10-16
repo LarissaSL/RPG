@@ -42,8 +42,16 @@ button {
 }
 
 button:hover{
+    background-color: #468018;
     box-shadow: inset -4px 4px 0 #222;
-    font-size: 1.1rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.bVoltar:hover{
+    background-color: #882b2b;
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 1rem;
 }
 
 a {
@@ -94,13 +102,8 @@ a {
     border-radius: 2rem;
 }
 
-.bVoltar{
-    background-color: #882b2b;
-}
 
-.bContinuar{
-    background-color: #468018;
-}
+
 
 @media screen and (min-width: 425px){
     .imgAvatarMinotauro{
@@ -225,6 +228,38 @@ a {
     h4{
         font-size: 25px;
     }
+
+    button{
+        font-size: .9rem;
+    }
+
+    .bVoltar:hover{
+        background-color: #882b2b;
+        box-shadow: inset -4px 4px 0 #222;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .imgAvatarMinotauro {
+        top: 8vh;
+        left: 60vh;
+    }
+
+    .imgAvatarCerbero {
+        position: absolute;
+        top: 18vh;
+        left: 62vh;
+        max-height: 34vh;
+    }
+
+    .imgAvatarElicius {
+        position: absolute;
+        top: 8vh;
+        left: 61vh;
+        max-height: 48vh;
+    }
+
 }
 
 @media screen and (min-width: 1440px) {
