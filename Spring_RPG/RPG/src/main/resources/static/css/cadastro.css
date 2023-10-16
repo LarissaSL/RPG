@@ -371,7 +371,7 @@ body{
 
     .voltar,
     .continuar {
-        margin: 3rem 0rem;
+        margin: 3rem -2rem;
         font-size: 1.8rem ;
     }
 
@@ -386,5 +386,9 @@ body{
 
     button:hover{
         font-size: 1.8rem;
+    }
+
+    button{
+        width: 143%;
     }
 }
